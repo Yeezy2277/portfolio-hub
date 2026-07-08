@@ -1,0 +1,11 @@
+{
+  "title": "Human-friendly project name",
+  "summary": "One or two sentences describing what it is and why it's interesting.",
+  "liveUrl": "https://my-project.vercel.app",
+  "image": "https://raw.githubusercontent.com/you/my-project/main/preview.png",
+  "tags": ["Next.js", "TypeScript", "Postgres"],
+  "embeddable": true,
+  "featured": true,
+  "order": 0,
+  "hidden": false
+}

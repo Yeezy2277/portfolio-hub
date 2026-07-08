@@ -1,0 +1,20 @@
+# Drop this into a SPOKE repo at .github/workflows/notify-hub.yml
+# It pings the hub to revalidate after the spoke deploys, so the new/updated
+# project shows up immediately instead of waiting for the hub's ISR window.
+#
+# Add a repo secret HUB_REVALIDATE_URL, e.g.
+#   https://<your-hub>/api/revalidate?secret=<REVALIDATE_SECRET>
+name: Notify portfolio hub
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+jobs:
+  ping:
+    # Only fire on a successful deployment.
+    if: github.event_name == 'workflow_dispatch' || github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Revalidate hub
+        run: curl -fsS -X POST "${{ secrets.HUB_REVALIDATE_URL }}" || echo "hub ping failed (non-fatal)"
