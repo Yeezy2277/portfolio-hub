@@ -15,8 +15,8 @@ export const localProjects: Project[] = [
     title: "Lumen",
     summary:
       "A Contentful content platform: typed Next.js frontend plus custom editor apps, webhooks, a scheduled audit and content-model migrations — all on free infra.",
-    liveUrl: "",
-    repoUrl: "https://github.com/your-github-username/cms-blog",
+    liveUrl: "https://cms-blog-steel.vercel.app",
+    repoUrl: "https://github.com/Yeezy2277/cms-blog",
     tags: ["Next.js", "Contentful", "TypeScript", "App Framework"],
     embeddable: false,
     featured: true,
@@ -30,7 +30,7 @@ export const localProjects: Project[] = [
     summary:
       "A custom PlateJS editor for Contentful Rich Text fields, with a round-trip-tested Contentful ⇄ Plate transform, slash menu and native embeds.",
     liveUrl: "",
-    repoUrl: "https://github.com/your-github-username/rich-text-editor",
+    repoUrl: "https://github.com/Yeezy2277/cms-blog/tree/main/apps/rich-text-editor",
     tags: ["PlateJS", "Slate", "Contentful", "TypeScript"],
     embeddable: false,
     featured: false,
