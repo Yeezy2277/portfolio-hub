@@ -78,7 +78,9 @@ export function PreviewModal({
               <p className={styles.note}>
                 {project.liveUrl
                   ? "This site doesn't allow embedding — open it live for the real thing."
-                  : "No live deployment yet."}
+                  : image
+                    ? "This one runs inside Contentful — preview shown above."
+                    : "No live deployment yet."}
               </p>
             </div>
           )}

@@ -31,6 +31,7 @@ export const localProjects: Project[] = [
       "A custom PlateJS editor for Contentful Rich Text fields, with a round-trip-tested Contentful ⇄ Plate transform, slash menu and native embeds.",
     liveUrl: "",
     repoUrl: "https://github.com/Yeezy2277/cms-blog/tree/main/apps/rich-text-editor",
+    image: "/rte-preview.svg",
     tags: ["PlateJS", "Slate", "Contentful", "TypeScript"],
     embeddable: true,
     featured: false,
