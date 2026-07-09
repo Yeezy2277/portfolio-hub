@@ -1,5 +1,6 @@
 import { getProjects } from "@/lib/projects";
 import { ProjectGrid } from "@/components/ProjectGrid";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import styles from "./page.module.css";
 
 // Statically rendered, revalidated hourly. New/updated repos surface on the
@@ -11,6 +12,7 @@ export default async function HomePage() {
 
   return (
     <main className={styles.page}>
+      <ThemeToggle />
       <header className={styles.header}>
         <h1 className={styles.title}>Projects</h1>
         <p className={styles.intro}>

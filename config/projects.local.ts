@@ -25,11 +25,25 @@ export const localProjects: Project[] = [
     stars: 0,
   },
   {
+    id: "editorial-toolkit",
+    title: "Editorial Toolkit",
+    summary:
+      "One multi-location Contentful App: slug editor, live reading time, sponsored-field validation, related-content picker and a duplicate-slug QA page — try them live against a mock CMS.",
+    liveUrl: "https://editorial-toolkit.vercel.app/?demo=1",
+    repoUrl: "https://github.com/Yeezy2277/cms-blog/tree/main/apps/editorial-toolkit",
+    tags: ["Contentful", "App Framework", "Forma 36", "TypeScript"],
+    embeddable: true,
+    featured: false,
+    hidden: false,
+    order: 2,
+    stars: 0,
+  },
+  {
     id: "rich-text-editor",
     title: "Rich text editor",
     summary:
       "A custom PlateJS editor for Contentful Rich Text fields, with a round-trip-tested Contentful ⇄ Plate transform, slash menu and native embeds.",
-    liveUrl: "",
+    liveUrl: "https://rich-text-editor-psi.vercel.app/?demo=1",
     repoUrl: "https://github.com/Yeezy2277/cms-blog/tree/main/apps/rich-text-editor",
     image: "/rte-preview.svg",
     tags: ["PlateJS", "Slate", "Contentful", "TypeScript"],
