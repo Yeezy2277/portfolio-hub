@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { Project } from "@/lib/types";
 import { previewImage } from "@/lib/preview";
 import styles from "./ProjectCard.module.css";
@@ -56,6 +57,7 @@ export function ProjectCard({
         )}
 
         <div className={styles.links}>
+          <Link href={`/projects/${project.id}`}>Details →</Link>
           {project.liveUrl && (
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               Live ↗

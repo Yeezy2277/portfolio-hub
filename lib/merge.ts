@@ -44,5 +44,10 @@ export function sortProjects(projects: Project[]): Project[] {
 
 /** Drop hidden, merge, then sort — the full pipeline over raw inputs. */
 export function resolveProjects(local: Project[], discovered: Project[]): Project[] {
-  return sortProjects(mergeById(local, discovered).filter((p) => !p.hidden));
+  return sortProjects(
+    mergeById(local, discovered)
+      .filter((p) => !p.hidden)
+      // Last-resort title: repos with no seed and no .portfolio.json show their id.
+      .map((p) => (p.title ? p : { ...p, title: p.id })),
+  );
 }

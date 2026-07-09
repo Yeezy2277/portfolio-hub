@@ -65,7 +65,7 @@ export function PreviewModal({
               src={project.liveUrl}
               title={`${project.title} live preview`}
               loading="lazy"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
             />
           ) : (
             <div className={styles.fallback}>

@@ -42,7 +42,9 @@ function repoToProject(repo: GhRepo, override: PortfolioOverride): Project {
   const tags = (override.tags ?? (repo.topics ?? []).filter((t) => t !== TOPIC)).slice(0, 6);
   return {
     id: repo.name,
-    title: override.title ?? repo.name,
+    // Only an explicit .portfolio.json title may override a local seed's title;
+    // the bare repo name is a last-resort fallback applied in resolveProjects.
+    title: override.title ?? "",
     summary: override.summary ?? repo.description ?? "",
     liveUrl: override.liveUrl ?? repo.homepage ?? undefined,
     repoUrl: repo.html_url,

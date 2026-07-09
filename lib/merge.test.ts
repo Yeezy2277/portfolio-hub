@@ -83,3 +83,17 @@ test("resolveProjects: a discovered override can hide a seeded project", () => {
   const discovered = [make("a", { hidden: true })];
   assert.deepEqual(resolveProjects(local, discovered), []);
 });
+
+test("resolveProjects: bare repo name never clobbers a seed title", () => {
+  // Discovery yields title "" unless .portfolio.json sets one (see repoToProject).
+  const local = [make("cms-blog", { title: "Lumen" })];
+  const discovered = [make("cms-blog", { title: "", stars: 3 })];
+  const [merged] = resolveProjects(local, discovered);
+  assert.equal(merged!.title, "Lumen");
+  assert.equal(merged!.stars, 3);
+});
+
+test("resolveProjects: unseeded repo without override falls back to its id", () => {
+  const [only] = resolveProjects([], [make("new-tool", { title: "" })]);
+  assert.equal(only!.title, "new-tool");
+});
