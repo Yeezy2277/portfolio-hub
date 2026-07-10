@@ -1,5 +1,8 @@
 # Portfolio Hub
 
+[![CI](https://github.com/Yeezy2277/portfolio-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/Yeezy2277/portfolio-hub/actions/workflows/ci.yml)
+[![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=Yeezy2277_portfolio-hub&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Yeezy2277_portfolio-hub)
+
 A **hub-and-spoke** portfolio. This site (the *hub*) is a small Next.js app that
 **auto-discovers** your projects from GitHub and showcases them as cards linking
 to independently deployed live apps (the *spokes*). Add the `portfolio` topic to
