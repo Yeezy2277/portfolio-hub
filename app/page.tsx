@@ -1,5 +1,7 @@
 import { getProjects } from "@/lib/projects";
+import { getProfile } from "@/lib/profile";
 import { ProjectGrid } from "@/components/ProjectGrid";
+import { AboutHero } from "@/components/AboutHero";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import styles from "./page.module.css";
 
@@ -8,17 +10,19 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 export default async function HomePage() {
-  const projects = await getProjects();
+  const [projects, profile] = await Promise.all([getProjects(), getProfile()]);
 
   return (
     <main className={styles.page}>
       <ThemeToggle />
+
+      <AboutHero profile={profile} />
+
       <header className={styles.header}>
-        <h1 className={styles.title}>Projects</h1>
+        <h2 className={styles.title}>Projects</h2>
         <p className={styles.intro}>
-          A hub of things I&apos;ve built. Each project lives in its own repo and
-          deploys independently — this page discovers them from GitHub and links
-          out to the live apps.
+          Each project lives in its own repo and deploys independently — this
+          page discovers them from GitHub and links out to the live apps.
         </p>
       </header>
 

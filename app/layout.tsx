@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Portfolio — projects";
+const title = "Vitalii Popov — Senior Frontend Engineer";
 const description =
-  "A hub of independently deployed projects, auto-discovered from GitHub.";
+  "Senior Frontend Engineer (React · Next.js · TypeScript · Contentful). A hub of live, inspectable projects — a public reproduction of the CMS-platform work I do.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-hub-eight-phi.vercel.app"),
   title,
   description,
   openGraph: { title, description, type: "website" },
