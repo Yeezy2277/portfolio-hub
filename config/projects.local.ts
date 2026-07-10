@@ -28,7 +28,7 @@ export const localProjects: Project[] = [
     id: "editorial-toolkit",
     title: "Editorial Toolkit",
     summary:
-      "One multi-location Contentful App: slug editor, live reading time, sponsored-field validation, related-content picker and a duplicate-slug QA page — try them live against a mock CMS.",
+      "One multi-location Contentful App, seven editor tools across four location types: slug, reading time, sponsored validation, related posts, URL→asset media importer, author sidebar and a validation hub — try them live against a mock CMS.",
     liveUrl: "https://editorial-toolkit.vercel.app/?demo=1",
     repoUrl: "https://github.com/Yeezy2277/cms-blog/tree/main/apps/editorial-toolkit",
     tags: ["Contentful", "App Framework", "Forma 36", "TypeScript"],
