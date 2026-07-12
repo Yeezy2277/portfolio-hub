@@ -53,4 +53,32 @@ export const localProjects: Project[] = [
     order: 1,
     stars: 0,
   },
+  {
+    id: "live-ops-console",
+    title: "Pulse — Live Ops Console",
+    summary:
+      "A real-time game-ops console: the world is simulated client-side and painted on canvas — high-frequency state, 60fps rendering decoupled from React, and a debounced event feed. No backend. A change of register from the Contentful work.",
+    liveUrl: "https://live-ops-console.vercel.app",
+    repoUrl: "https://github.com/Yeezy2277/live-ops-console",
+    tags: ["React", "TypeScript", "Canvas", "Real-time"],
+    embeddable: true,
+    featured: false,
+    hidden: false,
+    order: 3,
+    stars: 0,
+  },
+  {
+    id: "bim-clash-viewer",
+    title: "Girder — BIM clash viewer",
+    summary:
+      "A browser BIM coordination viewer: procedural building model, three.js scene with section plane and NavisWorks-style ghosted clash isolation, and a pure, unit-tested clash-detection engine. No backend.",
+    liveUrl: "https://bim-clash-viewer.vercel.app",
+    repoUrl: "https://github.com/Yeezy2277/bim-clash-viewer",
+    tags: ["three.js", "BIM", "TypeScript", "Computational geometry"],
+    embeddable: true,
+    featured: false,
+    hidden: false,
+    order: 4,
+    stars: 0,
+  },
 ];
