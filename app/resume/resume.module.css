@@ -1,0 +1,313 @@
+/* The résumé is a document. On screen it follows the site theme (dark/light);
+   in print it is always light. Colors come from vars so print can override in
+   one place. */
+
+.screen {
+  --r-back: #33404e;
+  --r-sheet: #ffffff;
+  --r-text: #1a2230;
+  --r-soft: #2c3745;
+  --r-muted: #45505f;
+  --r-dim: #6b7787;
+  --r-accent: #2f6fe4;
+  --r-rule: #e3e8ee;
+  --r-head: #1a2230;
+  min-height: 100vh;
+  background: var(--r-back);
+  padding: 28px 16px 60px;
+  transition: background-color 0.2s ease;
+}
+
+:global([data-theme="dark"]) .screen {
+  --r-back: #0d1117;
+  --r-sheet: #161b22;
+  --r-text: #e6edf3;
+  --r-soft: #cdd6e0;
+  --r-muted: #9aa7b4;
+  --r-dim: #7c8896;
+  --r-accent: #6ea3ff;
+  --r-rule: #262e39;
+  --r-head: #e6edf3;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 8.5in;
+  margin: 0 auto 18px;
+}
+
+.back {
+  color: #cdd6e2;
+  font-size: 0.9rem;
+}
+
+:global([data-theme="light"]) .back {
+  color: #cdd6e2;
+}
+
+.back:hover {
+  filter: brightness(1.25);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.themeBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e6edf3;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.themeBtn:hover {
+  border-color: #4c8dff;
+}
+
+.print {
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #4c8dff;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.print:hover {
+  background: #3a7cf0;
+}
+
+.sheet {
+  max-width: 8.5in;
+  margin: 0 auto;
+  background: var(--r-sheet);
+  color: var(--r-text);
+  padding: 0.62in 0.7in;
+  border-radius: 6px;
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.34);
+  font-size: 10.6pt;
+  line-height: 1.42;
+}
+
+.head {
+  border-bottom: 2px solid var(--r-head);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.name {
+  margin: 0 0 3px;
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--r-head);
+}
+
+.headline {
+  margin: 0 0 5px;
+  font-size: 11pt;
+  color: var(--r-accent);
+  font-weight: 600;
+}
+
+.contact {
+  margin: 1px 0;
+  font-size: 9.4pt;
+  color: var(--r-muted);
+}
+
+.contact a {
+  color: var(--r-muted);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--r-accent);
+  text-decoration: underline;
+}
+
+.sep {
+  color: var(--r-dim);
+}
+
+.section {
+  margin-bottom: 13px;
+}
+
+.sectionTitle {
+  margin: 0 0 6px;
+  font-size: 8.6pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--r-accent);
+  border-bottom: 1px solid var(--r-rule);
+  padding-bottom: 3px;
+}
+
+.summary {
+  margin: 0 0 5px;
+  color: var(--r-soft);
+}
+
+.skills {
+  margin: 0;
+  color: var(--r-soft);
+  font-weight: 500;
+}
+
+.role {
+  margin-bottom: 9px;
+}
+
+.roleHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.roleCompany {
+  font-weight: 700;
+  font-size: 10.8pt;
+  color: var(--r-text);
+}
+
+.roleCompanyLink {
+  color: var(--r-text);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--r-accent);
+}
+
+.roleCompanyLink:hover {
+  color: var(--r-accent);
+}
+
+.roleTitle {
+  font-weight: 500;
+  color: var(--r-muted);
+}
+
+.rolePeriod {
+  font-size: 9.2pt;
+  color: var(--r-dim);
+  white-space: nowrap;
+}
+
+.roleSummary {
+  margin: 2px 0 0;
+  color: var(--r-soft);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.eduItem {
+  margin-bottom: 7px;
+}
+
+.eduSchool {
+  font-weight: 600;
+}
+
+.eduMeta {
+  font-size: 9.4pt;
+  color: var(--r-muted);
+}
+
+.certList {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+}
+
+.certList li {
+  color: var(--r-soft);
+  padding-left: 15px;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.certList li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--r-accent);
+}
+
+.certList a {
+  color: var(--r-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--r-rule);
+}
+
+.certList a:hover {
+  color: var(--r-accent);
+}
+
+.langs {
+  margin: 0;
+  font-size: 9.6pt;
+  color: var(--r-muted);
+}
+
+/* ---- print: always light, chromeless ---- */
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+@media print {
+  .screen {
+    --r-back: #fff;
+    --r-sheet: #fff;
+    --r-text: #1a2230;
+    --r-soft: #2c3745;
+    --r-muted: #45505f;
+    --r-dim: #6b7787;
+    --r-accent: #2f6fe4;
+    --r-rule: #e3e8ee;
+    --r-head: #1a2230;
+    background: #fff;
+    padding: 0;
+  }
+  .toolbar {
+    display: none;
+  }
+  .sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 10.4pt;
+  }
+  .role,
+  .section {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 720px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .sheet {
+    padding: 24px 20px;
+    font-size: 11pt;
+  }
+}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Profile } from "@/config/profile";
 import styles from "./AboutHero.module.css";
 
@@ -40,6 +41,9 @@ export function AboutHero({ profile }: { profile: Profile }) {
           )}
 
           <div className={styles.links}>
+            <Link href="/resume" className={styles.resume}>
+              Resume
+            </Link>
             {profile.links.map((l) => (
               <a
                 key={l.label}

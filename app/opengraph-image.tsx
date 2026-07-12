@@ -37,15 +37,15 @@ export default function OpengraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
-            Projects I&apos;ve built
+            Vitalii Popov
           </div>
           <div style={{ fontSize: 30, color: "#9aa7b4", maxWidth: 820, lineHeight: 1.4 }}>
-            Independently deployed apps, auto-discovered from GitHub.
+            Senior Frontend Engineer — live, inspectable projects: CMS platform, real-time canvas, 3D/BIM.
           </div>
         </div>
 
         <div style={{ display: "flex", gap: 12 }}>
-          {["Next.js", "TypeScript", "Contentful", "PlateJS"].map((t) => (
+          {["React", "Next.js", "TypeScript", "Contentful", "three.js"].map((t) => (
             <div
               key={t}
               style={{

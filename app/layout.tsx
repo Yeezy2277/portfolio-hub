@@ -3,10 +3,10 @@ import "./globals.css";
 
 const title = "Vitalii Popov — Senior Frontend Engineer";
 const description =
-  "Senior Frontend Engineer (React · Next.js · TypeScript · Contentful). A hub of live, inspectable projects — a public reproduction of the CMS-platform work I do.";
+  "Senior Frontend Engineer (React · Next.js · TypeScript · Contentful). Live, inspectable projects — CMS platform, real-time canvas, 3D/BIM. Remote, US-hours friendly.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-hub-eight-phi.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://vitaliipopov.dev"),
   title,
   description,
   openGraph: { title, description, type: "website" },

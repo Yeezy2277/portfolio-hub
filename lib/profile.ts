@@ -64,6 +64,7 @@ export async function getProfile(): Promise<Profile> {
     languages: pick(cms.languages, fallback.languages),
     certifications: pick(cms.certifications, fallback.certifications),
     experience: pick(cms.experience, fallback.experience),
+    education: pick(cms.education, fallback.education),
     links: pick(cms.links, fallback.links),
   };
 }
