@@ -25,6 +25,15 @@
   letter-spacing: 0.02em;
 }
 
+.photo {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
 .identity {
   min-width: 0;
 }

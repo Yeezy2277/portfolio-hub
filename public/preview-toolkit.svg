@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="800" height="450" fill="#0d1117"/>
+  <text x="40" y="52" fill="#e6edf3" font-size="17" font-weight="700">Editorial Toolkit</text>
+  <text x="40" y="72" fill="#6b7787" font-size="12">seven tools · four location types</text>
+  <!-- field 1: slug widget -->
+  <g>
+    <text x="40" y="112" fill="#e6edf3" font-size="12" font-weight="600">Slug</text>
+    <rect x="82" y="101" width="74" height="15" rx="7" fill="rgba(76,141,255,0.16)" stroke="#4c8dff"/>
+    <text x="119" y="112" fill="#7fb0ff" font-size="8" text-anchor="middle" font-weight="700">APP WIDGET</text>
+    <rect x="40" y="124" width="720" height="52" rx="8" fill="#fff"/>
+    <rect x="56" y="140" width="300" height="10" rx="5" fill="#c9d4e0"/>
+    <text x="640" y="155" fill="#9aa5b1" font-size="11" text-anchor="end">39 / 120</text>
+  </g>
+  <!-- field 2: reading time -->
+  <g>
+    <text x="40" y="212" fill="#e6edf3" font-size="12" font-weight="600">Reading time</text>
+    <rect x="150" y="201" width="74" height="15" rx="7" fill="rgba(76,141,255,0.16)" stroke="#4c8dff"/>
+    <text x="187" y="212" fill="#7fb0ff" font-size="8" text-anchor="middle" font-weight="700">APP WIDGET</text>
+    <rect x="40" y="224" width="720" height="46" rx="8" fill="#fff"/>
+    <rect x="56" y="238" width="90" height="18" rx="9" fill="rgba(76,141,255,0.16)"/>
+    <text x="101" y="251" fill="#1f5fbf" font-size="11" text-anchor="middle" font-weight="600">1 min read</text>
+  </g>
+  <!-- field 3: cover image -->
+  <g>
+    <text x="40" y="306" fill="#e6edf3" font-size="12" font-weight="600">Cover image</text>
+    <rect x="150" y="295" width="74" height="15" rx="7" fill="rgba(76,141,255,0.16)" stroke="#4c8dff"/>
+    <text x="187" y="306" fill="#7fb0ff" font-size="8" text-anchor="middle" font-weight="700">APP WIDGET</text>
+    <rect x="40" y="318" width="720" height="96" rx="8" fill="#fff"/>
+    <rect x="56" y="334" width="80" height="64" rx="6" fill="url(#tg)"/>
+    <rect x="152" y="344" width="150" height="10" rx="5" fill="#2c3745"/>
+    <rect x="152" y="366" width="430" height="30" rx="6" fill="#f4f6fa" stroke="#dde3ec"/>
+    <text x="168" y="385" fill="#9aa5b1" font-size="11">https://…/image.jpg</text>
+    <rect x="596" y="366" width="80" height="30" rx="6" fill="#4c8dff"/>
+    <text x="636" y="385" fill="#fff" font-size="11" text-anchor="middle" font-weight="600">Import</text>
+  </g>
+  <defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c8dff"/><stop offset="1" stop-color="#7b5cff"/></linearGradient>
+  </defs>
+</svg>

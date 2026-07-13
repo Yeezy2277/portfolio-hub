@@ -13,7 +13,10 @@ const TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
 const ENV = process.env.CONTENTFUL_ENVIRONMENT || "master";
 const REVALIDATE = 3600;
 
-type CdaEntry = { fields?: Partial<Profile> };
+type AssetLink = { sys?: { id?: string } };
+type CdaEntry = { fields?: Partial<Profile> & { avatar?: AssetLink } };
+type CdaAsset = { sys: { id: string }; fields?: { file?: { url?: string } } };
+type CdaResponse = { items?: CdaEntry[]; includes?: { Asset?: CdaAsset[] } };
 
 async function fetchContentfulProfile(): Promise<Partial<Profile> | null> {
   if (!SPACE || !TOKEN) return null;
@@ -23,8 +26,19 @@ async function fetchContentfulProfile(): Promise<Partial<Profile> | null> {
       `?content_type=profile&limit=1&access_token=${TOKEN}`;
     const res = await fetch(url, { next: { revalidate: REVALIDATE } });
     if (!res.ok) return null;
-    const data = (await res.json()) as { items?: CdaEntry[] };
-    return data.items?.[0]?.fields ?? null;
+    const data = (await res.json()) as CdaResponse;
+    const fields = data.items?.[0]?.fields;
+    if (!fields) return null;
+
+    // Resolve the linked avatar asset to an https URL.
+    const avatarId = fields.avatar?.sys?.id;
+    if (avatarId) {
+      const asset = data.includes?.Asset?.find((a) => a.sys.id === avatarId);
+      const fileUrl = asset?.fields?.file?.url;
+      if (fileUrl) fields.avatar = `https:${fileUrl}` as never;
+      else delete fields.avatar;
+    }
+    return fields as Partial<Profile>;
   } catch {
     return null;
   }
@@ -53,6 +67,7 @@ export async function getProfile(): Promise<Profile> {
 
   return {
     name: pick(cms.name, fallback.name),
+    avatar: typeof cms.avatar === "string" ? cms.avatar : fallback.avatar,
     headline: pick(cms.headline, fallback.headline),
     tagline: pick(cms.tagline, fallback.tagline),
     location: pick(cms.location, fallback.location),

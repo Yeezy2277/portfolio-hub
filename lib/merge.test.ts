@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mergeById, sortProjects, resolveProjects } from "./merge.ts";
+import { mergeById, sortProjects, resolveProjects, applyOverrides } from "./merge.ts";
 import type { Project } from "./types.ts";
 
 function make(id: string, over: Partial<Project> = {}): Project {
@@ -96,4 +96,37 @@ test("resolveProjects: bare repo name never clobbers a seed title", () => {
 test("resolveProjects: unseeded repo without override falls back to its id", () => {
   const [only] = resolveProjects([], [make("new-tool", { title: "" })]);
   assert.equal(only!.title, "new-tool");
+});
+
+test("applyOverrides: CMS fields overlay a matching seed; blanks fall back", () => {
+  const seed = [make("a", { title: "Seed A", summary: "seed", order: 0, tags: ["x"] })];
+  const [a] = applyOverrides(seed, [
+    { id: "a", title: "CMS A", summary: "", tags: undefined, order: 5 },
+  ]);
+  assert.equal(a!.title, "CMS A", "non-empty CMS value overrides");
+  assert.equal(a!.summary, "seed", "blank CMS string falls back to seed");
+  assert.deepEqual(a!.tags, ["x"], "unset CMS array falls back to seed");
+  assert.equal(a!.order, 5, "order is taken from CMS when present");
+});
+
+test("applyOverrides: booleans always take the CMS value (can force hidden)", () => {
+  const seed = [make("a", { hidden: false, featured: true })];
+  const [a] = applyOverrides(seed, [{ id: "a", hidden: true, featured: false }]);
+  assert.equal(a!.hidden, true);
+  assert.equal(a!.featured, false);
+});
+
+test("applyOverrides: a CMS-only entry (no seed) is added on defaults", () => {
+  const [b] = applyOverrides([make("a")], [{ id: "b", title: "CMS B" }]).filter(
+    (p) => p.id === "b",
+  );
+  assert.equal(b!.title, "CMS B");
+  assert.equal(b!.order, 100, "defaults fill fields the CMS didn't set");
+  assert.equal(b!.embeddable, false);
+});
+
+test("applyOverrides: does not mutate the seed array", () => {
+  const seed = [make("a", { title: "Seed A" })];
+  applyOverrides(seed, [{ id: "a", title: "CMS A" }]);
+  assert.equal(seed[0]!.title, "Seed A");
 });

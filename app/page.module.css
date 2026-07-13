@@ -45,6 +45,9 @@
 }
 
 @media (max-width: 640px) {
+  .page {
+    padding: 56px 16px 72px;
+  }
   .grid {
     grid-template-columns: 1fr;
   }

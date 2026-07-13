@@ -23,6 +23,8 @@ export type Role = {
 
 export type Profile = {
   name: string;
+  /** Optional photo URL (Contentful asset or /public path). Falls back to initials. */
+  avatar?: string;
   headline: string;
   tagline: string;
   location: string;
@@ -40,6 +42,8 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Vitalii Popov",
+  // Set once a photo is uploaded (Contentful profile.avatar overrides this).
+  avatar: undefined,
   headline: "Senior Frontend Engineer",
   tagline: "React · Next.js · TypeScript · Headless CMS (Contentful)",
   location: "Tbilisi, Georgia",
