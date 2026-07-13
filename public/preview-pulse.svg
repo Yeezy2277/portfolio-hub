@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="800" height="450" fill="#0b0f16"/>
+  <!-- metric tiles -->
+  <g>
+    <rect x="24" y="24" width="178" height="96" rx="12" fill="#12171f" stroke="#232c38"/>
+    <text x="40" y="52" fill="#6b7787" font-size="10" letter-spacing="1">PLAYERS ONLINE</text>
+    <text x="40" y="82" fill="#4c8dff" font-size="24" font-weight="700">31,708</text>
+    <polyline points="40,108 60,102 80,104 100,96 120,100 140,90 160,94 182,86" fill="none" stroke="#4c8dff" stroke-width="2"/>
+    <rect x="212" y="24" width="178" height="96" rx="12" fill="#12171f" stroke="#232c38"/>
+    <text x="228" y="52" fill="#6b7787" font-size="10" letter-spacing="1">MATCHES / MIN</text>
+    <text x="228" y="82" fill="#2dd4a0" font-size="24" font-weight="700">2,298</text>
+    <polyline points="228,105 248,98 268,106 288,95 308,102 328,92 348,100 370,96" fill="none" stroke="#2dd4a0" stroke-width="2"/>
+    <rect x="400" y="24" width="178" height="96" rx="12" fill="#12171f" stroke="#232c38"/>
+    <text x="416" y="52" fill="#6b7787" font-size="10" letter-spacing="1">CREDITS / MIN</text>
+    <text x="416" y="82" fill="#f5b544" font-size="24" font-weight="700">206k</text>
+    <polyline points="416,106 436,100 456,104 476,94 496,100 516,92 536,98 558,90" fill="none" stroke="#f5b544" stroke-width="2"/>
+    <rect x="588" y="24" width="188" height="96" rx="12" fill="#12171f" stroke="#232c38"/>
+    <text x="604" y="52" fill="#6b7787" font-size="10" letter-spacing="1">P95 LATENCY</text>
+    <text x="604" y="82" fill="#7b5cff" font-size="24" font-weight="700">52 ms</text>
+    <polyline points="604,104 624,100 644,90 664,86 684,96 704,102 724,98 758,100" fill="none" stroke="#7b5cff" stroke-width="2"/>
+  </g>
+  <!-- map -->
+  <rect x="24" y="136" width="752" height="290" rx="12" fill="#0c121a" stroke="#232c38"/>
+  <g stroke="#1a2230" stroke-width="1">
+    <line x1="24" y1="200" x2="776" y2="200"/><line x1="24" y1="280" x2="776" y2="280"/><line x1="24" y1="360" x2="776" y2="360"/>
+    <line x1="200" y1="136" x2="200" y2="426"/><line x1="400" y1="136" x2="400" y2="426"/><line x1="600" y1="136" x2="600" y2="426"/>
+  </g>
+  <g stroke="rgba(76,141,255,0.14)" stroke-width="1">
+    <line x1="150" y1="240" x2="330" y2="210"/><line x1="330" y1="210" x2="470" y2="260"/><line x1="470" y1="260" x2="640" y2="300"/><line x1="150" y1="240" x2="300" y2="340"/>
+  </g>
+  <g>
+    <circle cx="150" cy="240" r="16" fill="#4c8dff" opacity="0.6"/><circle cx="150" cy="240" r="7" fill="#4c8dff"/>
+    <circle cx="330" cy="210" r="22" fill="#4c8dff" opacity="0.5"/><circle cx="330" cy="210" r="9" fill="#4c8dff"/>
+    <circle cx="470" cy="260" r="14" fill="#f5b544" opacity="0.6"/><circle cx="470" cy="260" r="6" fill="#f5b544"/>
+    <circle cx="640" cy="300" r="18" fill="#4c8dff" opacity="0.55"/><circle cx="640" cy="300" r="8" fill="#4c8dff"/>
+    <circle cx="300" cy="340" r="15" fill="#4c8dff" opacity="0.55"/><circle cx="300" cy="340" r="7" fill="#4c8dff"/>
+  </g>
+  <text x="44" y="164" fill="#6b7787" font-size="11" letter-spacing="1">WORLD MAP · LIVE</text>
+</svg>

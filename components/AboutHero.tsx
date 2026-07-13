@@ -17,9 +17,14 @@ export function AboutHero({ profile }: { profile: Profile }) {
   return (
     <header className={styles.about}>
       <div className={styles.top}>
-        <div className={styles.avatar} aria-hidden="true">
-          {initials(profile.name)}
-        </div>
+        {profile.avatar ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className={styles.photo} src={profile.avatar} alt={profile.name} />
+        ) : (
+          <div className={styles.avatar} aria-hidden="true">
+            {initials(profile.name)}
+          </div>
+        )}
 
         <div className={styles.identity}>
           <h1 className={styles.name}>{profile.name}</h1>

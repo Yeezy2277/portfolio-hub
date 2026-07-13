@@ -32,6 +32,50 @@ export function mergeById(local: Project[], discovered: Project[]): Project[] {
   return [...byId.values()];
 }
 
+const EMPTY_PROJECT: Omit<Project, "id"> = {
+  title: "",
+  summary: "",
+  tags: [],
+  embeddable: false,
+  featured: false,
+  hidden: false,
+  order: 100,
+  stars: 0,
+};
+
+/** True for values that should NOT override a seed (unset / blank / empty). */
+function isEmpty(v: unknown): boolean {
+  return (
+    v == null ||
+    (typeof v === "string" && v.trim() === "") ||
+    (Array.isArray(v) && v.length === 0)
+  );
+}
+
+/**
+ * Overlay CMS/remote partials onto seeds by id — keeping the seed's value
+ * wherever the override leaves a field unset. New ids (present only in the
+ * overlay) are added on top of empty defaults. Booleans and `order` are always
+ * taken from the override when present, so a CMS entry can force `hidden`/order.
+ */
+export function applyOverrides(
+  base: Project[],
+  overrides: Array<{ id: string } & Partial<Project>>,
+): Project[] {
+  const byId = new Map(base.map((p) => [p.id, p]));
+  for (const o of overrides) {
+    const seed = byId.get(o.id) ?? { id: o.id, ...EMPTY_PROJECT };
+    const merged: Project = { ...seed };
+    for (const [k, v] of Object.entries(o) as [keyof Project, unknown][]) {
+      if (k === "id") continue;
+      const alwaysTake = typeof v === "boolean" || k === "order";
+      if (alwaysTake || !isEmpty(v)) (merged as Record<string, unknown>)[k] = v;
+    }
+    byId.set(o.id, merged);
+  }
+  return [...byId.values()];
+}
+
 /** Sort: featured first, then explicit order, then most-recently pushed. */
 export function sortProjects(projects: Project[]): Project[] {
   return [...projects].sort(
