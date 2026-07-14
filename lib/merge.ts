@@ -21,7 +21,9 @@ export function mergeById(local: Project[], discovered: Project[]): Project[] {
             title: d.title || base.title,
             summary: d.summary || base.summary,
             liveUrl: d.liveUrl || base.liveUrl,
-            tags: d.tags.length ? d.tags : base.tags,
+            // Prefer the curated seed tags over raw GitHub topics (which are
+            // lowercase/hyphenated) — fall back to topics only when unseeded.
+            tags: base.tags.length ? base.tags : d.tags,
             featured: base.featured || d.featured,
             image: d.image ?? base.image,
             embeddable: d.embeddable || base.embeddable,
