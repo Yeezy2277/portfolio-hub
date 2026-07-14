@@ -5,7 +5,7 @@ import { resolveProjects, applyOverrides } from "@/lib/merge";
 const USER = process.env.GITHUB_USER;
 const TOPIC = process.env.PORTFOLIO_TOPIC || "portfolio";
 const TOKEN = process.env.GITHUB_TOKEN;
-const REVALIDATE = 3600; // seconds — ISR window for discovery
+const REVALIDATE = 60; // seconds — ISR window for discovery
 
 const CF_SPACE = process.env.CONTENTFUL_SPACE_ID;
 const CF_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;

@@ -7,7 +7,7 @@ import { previewImage } from "@/lib/preview";
 import { fetchReadmeHtml } from "@/lib/readme";
 import styles from "./page.module.css";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const projects = await getProjects();
