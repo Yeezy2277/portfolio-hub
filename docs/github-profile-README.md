@@ -41,6 +41,7 @@ infrastructure (Vercel + Contentful + GitHub Actions).
 | Project | What it is | Live | Code |
 | --- | --- | --- | --- |
 | **Lumen** | Headless-CMS content platform — typed Next.js frontend, custom editor apps, webhooks, scheduled audit, content-model migrations, full quality gates. | [demo](https://lumen.vitaliipopov.dev) | [repo](https://github.com/Yeezy2277/cms-blog) |
+| **Depot** | The backend half of a CMS — auth (sessions + hashed API tokens), a typed Postgres content model, and a token-secured delivery API. Next.js + Drizzle + Neon. | [demo](https://depot.vitaliipopov.dev) | [repo](https://github.com/Yeezy2277/depot) |
 | **Editorial Toolkit** | One Contentful App, 7 editor tools across 4 SDK location types — try them live against a mock CMS, no login. | [demo](https://toolkit.vitaliipopov.dev/?demo=1) | [repo](https://github.com/Yeezy2277/cms-blog/tree/main/apps/editorial-toolkit) |
 | **Rich Text Editor** | Custom PlateJS/Slate editor for Contentful Rich Text, with a round-trip-tested Contentful ⇄ Plate transform. | [demo](https://rte.vitaliipopov.dev/?demo=1) | [repo](https://github.com/Yeezy2277/cms-blog/tree/main/apps/rich-text-editor) |
 | **Pulse** | Real-time game-ops console — client-side world simulation on canvas, 60fps decoupled from React. No backend. | [demo](https://pulse.vitaliipopov.dev) | [repo](https://github.com/Yeezy2277/live-ops-console) |
