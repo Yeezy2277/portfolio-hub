@@ -107,7 +107,7 @@ export const profile: Profile = {
       title: "Frontend Developer",
       period: "2022",
       summary:
-        "Introduced feature-toggling to ship and roll back features without redeploys, built a reusable UI component library that cut delivery time on new internal tools, and a reporting dashboard that removed manual data-collection work for analysts.",
+        "Short engagement on internal tooling: introduced feature-toggling for safe releases and contributed to a shared React component library.",
     },
   ],
   education: [
@@ -115,11 +115,6 @@ export const profile: Profile = {
       school: "Belgorod Shukhov State Technology University",
       degree: "BSc, Information Technology",
       period: "2018 – 2022",
-    },
-    {
-      school: "UniCesumar",
-      degree: "BSc, Computer Software Engineering",
-      period: "2025 – 2028",
     },
   ],
   links: [
