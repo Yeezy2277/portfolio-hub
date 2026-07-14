@@ -23,10 +23,17 @@
   width: 100%;
   padding: 0;
   aspect-ratio: 16 / 9;
-  background: var(--surface-2);
+  /* Previews are dark-app screenshots — keep a fixed dark viewport in both
+     themes so they read as intentional framed shots, not a stray dark block. */
+  background: #0d1117;
   border: none;
   border-bottom: 1px solid var(--border);
   cursor: pointer;
+}
+
+/* In light mode, a soft inset edge separates the dark shot from the light card. */
+:root[data-theme="light"] .thumb {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .thumb img {
