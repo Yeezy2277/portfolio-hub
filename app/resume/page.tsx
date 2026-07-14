@@ -4,7 +4,7 @@ import { getProfile } from "@/lib/profile";
 import { ResumeToolbar } from "@/components/ResumeToolbar";
 import styles from "./resume.module.css";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Vitalii Popov — Resume",

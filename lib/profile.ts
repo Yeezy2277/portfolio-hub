@@ -11,7 +11,7 @@ import { profile as fallback, type Profile } from "@/config/profile";
 const SPACE = process.env.CONTENTFUL_SPACE_ID;
 const TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
 const ENV = process.env.CONTENTFUL_ENVIRONMENT || "master";
-const REVALIDATE = 3600;
+const REVALIDATE = 60;
 
 type AssetLink = { sys?: { id?: string } };
 type CdaEntry = { fields?: Partial<Profile> & { avatar?: AssetLink } };

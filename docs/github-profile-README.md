@@ -10,7 +10,7 @@
   <b>Senior Frontend Engineer</b> · React · Next.js · TypeScript · Headless CMS (Contentful)
 </p>
 <p align="center">
-  Remote · daily overlap with US East Coast hours · open to full-time or B2B contract
+  Medellín, Colombia · Remote, US Eastern hours (UTC-5) · open to full-time or B2B contract
 </p>
 <p align="center">
   <a href="https://vitaliipopov.dev">Portfolio</a> ·

@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 // Statically rendered, revalidated hourly. New/updated repos surface on the
 // next window, or immediately via POST /api/revalidate from a spoke deploy.
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export default async function HomePage() {
   const [projects, profile] = await Promise.all([getProjects(), getProfile()]);
