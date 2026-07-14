@@ -30,13 +30,18 @@ test("mergeById: discovered enriches a matching local seed", () => {
   assert.equal(a.updatedAt, "2026-01-01", "takes live pushed date from discovery");
 });
 
-test("mergeById: discovered overrides non-empty fields", () => {
+test("mergeById: discovered overrides title, but seed tags are preferred", () => {
   const local = [make("a", { title: "Seed A", tags: ["x"] })];
   const discovered = [make("a", { title: "Live A", tags: ["y", "z"] })];
 
   const a = mergeById(local, discovered)[0]!;
-  assert.equal(a.title, "Live A");
-  assert.deepEqual(a.tags, ["y", "z"]);
+  assert.equal(a.title, "Live A", "discovered title wins");
+  assert.deepEqual(a.tags, ["x"], "curated seed tags win over GitHub topics");
+});
+
+test("mergeById: an unseeded project keeps its discovered topics", () => {
+  const a = mergeById([], [make("solo", { tags: ["topic-a", "topic-b"] })])[0]!;
+  assert.deepEqual(a.tags, ["topic-a", "topic-b"]);
 });
 
 test("mergeById: featured is sticky (true from either side wins)", () => {
