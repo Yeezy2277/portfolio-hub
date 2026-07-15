@@ -1,7 +1,7 @@
 # Portfolio Hub
 
 [![CI](https://github.com/Yeezy2277/portfolio-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/Yeezy2277/portfolio-hub/actions/workflows/ci.yml)
-[![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=Yeezy2277_portfolio-hub&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Yeezy2277_portfolio-hub)
+[![CodeQL](https://github.com/Yeezy2277/portfolio-hub/actions/workflows/codeql.yml/badge.svg)](https://github.com/Yeezy2277/portfolio-hub/actions/workflows/codeql.yml)
 
 A **hub-and-spoke** portfolio. This site (the *hub*) is a small Next.js app that
 **auto-discovers** your projects from GitHub and showcases them as cards linking
@@ -11,6 +11,12 @@ a repo → it appears here. No per-project wiring, no monorepo.
 > **Live demo:** _add your Vercel URL here_
 
 ---
+
+## Performance
+
+Lighthouse (PageSpeed Insights) on the live site — desktop:
+
+![Lighthouse scores — Performance 100, Accessibility 96, Best Practices 100, SEO 100](./docs/lighthouse.png)
 
 ## How it works
 
