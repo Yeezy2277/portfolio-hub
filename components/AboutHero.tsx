@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Profile } from "@/config/profile";
+import { CERT_LINKS, type Profile } from "@/config/profile";
 import styles from "./AboutHero.module.css";
 
 function initials(name: string): string {
@@ -106,9 +106,25 @@ export function AboutHero({ profile }: { profile: Profile }) {
           <div className={styles.sideBlock}>
             <h2 className={styles.colTitle}>Certifications</h2>
             <ul className={styles.plainList}>
-              {profile.certifications.map((c) => (
-                <li key={c}>{c}</li>
-              ))}
+              {profile.certifications.map((c) => {
+                const url = CERT_LINKS[c];
+                return (
+                  <li key={c}>
+                    {url ? (
+                      <a
+                        className={styles.certLink}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {c}
+                      </a>
+                    ) : (
+                      c
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className={styles.sideBlock}>

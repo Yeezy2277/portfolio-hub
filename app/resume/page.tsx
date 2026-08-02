@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getProfile } from "@/lib/profile";
+import { CERT_LINKS } from "@/config/profile";
 import { ResumeToolbar } from "@/components/ResumeToolbar";
 import styles from "./resume.module.css";
 
@@ -13,14 +14,6 @@ export const metadata: Metadata = {
 };
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://vitaliipopov.dev";
-
-/** "Verify" links for credentials that have a public page. */
-const CERT_LINKS: Record<string, string> = {
-  "Contentful Certified Professional":
-    "https://ti-user-certificates.s3.amazonaws.com/ed258d5d-ccc5-4607-a3e7-90c44a8102ac/5d32b863-961f-4850-b926-ec6ec1d6c243-vitalii-popov-8c9f32bd-9ee1-4396-8fce-5a58e1872589-certificate.pdf",
-  "Meta — Introduction to Front-End Development":
-    "https://www.coursera.org/account/accomplishments/verify/AQBQXJNOWME1",
-};
 
 export default async function ResumePage() {
   const p = await getProfile();

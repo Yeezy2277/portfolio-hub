@@ -242,6 +242,19 @@
   text-decoration: underline;
 }
 
+.certLink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.certLink:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
 .side {
   display: flex;
   flex-direction: column;
