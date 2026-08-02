@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test lib/*.test.ts"
+    "test": "node --experimental-strip-types --test lib/*.test.ts",
+    "check:profile": "node --experimental-strip-types --env-file-if-exists=.env.local scripts/check-profile-sync.mjs"
   },
   "dependencies": {
     "marked": "^14.1.4",
