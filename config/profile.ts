@@ -124,3 +124,15 @@ export const profile: Profile = {
     { label: "GitHub", url: "https://github.com/Yeezy2277" },
   ],
 };
+
+/**
+ * "Verify" links for credentials that have a public page — keyed by the exact
+ * certification string in `profile.certifications`. Shared by the About hero
+ * and the résumé so a credential is a live link in both.
+ */
+export const CERT_LINKS: Record<string, string> = {
+  "Contentful Certified Professional":
+    "https://ti-user-certificates.s3.amazonaws.com/ed258d5d-ccc5-4607-a3e7-90c44a8102ac/5d32b863-961f-4850-b926-ec6ec1d6c243-vitalii-popov-8c9f32bd-9ee1-4396-8fce-5a58e1872589-certificate.pdf",
+  "Meta — Introduction to Front-End Development":
+    "https://www.coursera.org/account/accomplishments/verify/AQBQXJNOWME1",
+};
