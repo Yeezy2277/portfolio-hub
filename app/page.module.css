@@ -1,57 +1,122 @@
-.page {
-  position: relative;
+.site,
+.page,
+.footer {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 72px 24px 96px;
+  padding-inline: 24px;
+}
+
+.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-block: 20px;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  box-shadow: 0 0 18px var(--accent-soft);
+}
+
+.markText {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav a {
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.page {
+  padding-block: 24px 96px;
+  outline: none;
+}
+
+.work {
+  scroll-margin-top: 24px;
 }
 
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+  max-width: 760px;
 }
 
 .title {
-  margin: 0 0 12px;
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  margin: 10px 0 14px;
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.thin {
+  font-weight: 200;
 }
 
 .intro {
   margin: 0;
-  max-width: 620px;
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
 .empty {
   padding: 40px;
   border: 1px dashed var(--border);
-  border-radius: var(--radius);
   color: var(--text-muted);
   text-align: center;
 }
 
 .footer {
-  margin-top: 56px;
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-block: 28px 48px;
+  border-top: 1px solid var(--border);
+}
+
+.footLink {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--accent);
 }
 
 @media (max-width: 640px) {
-  .page {
-    padding: 56px 16px 72px;
+  .site,
+  .page,
+  .footer {
+    padding-inline: 16px;
   }
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  .title {
-    font-size: 1.9rem;
+  .nav {
+    gap: 16px;
   }
 }

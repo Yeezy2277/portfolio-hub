@@ -1,31 +1,19 @@
 .toggle {
-  position: absolute;
-  top: 28px;
-  right: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1;
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
-  transform: rotate(12deg);
-}
-
-@media (max-width: 640px) {
-  .toggle {
-    top: 14px;
-    right: 16px;
-  }
 }

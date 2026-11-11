@@ -15,31 +15,31 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0d1117",
-          color: "#e6edf3",
+          background: "#0c0c0e",
+          color: "#ecebe6",
           padding: "72px",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 16, color: "#4c8dff" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 16, color: "#ff5b2e" }}>
           <div
             style={{
               width: 20,
               height: 20,
-              borderRadius: 6,
-              background: "#4c8dff",
+              borderRadius: 0,
+              background: "#ff5b2e",
             }}
           />
           <div style={{ fontSize: 26, letterSpacing: 2, textTransform: "uppercase" }}>
-            Portfolio
+            vitaliipopov.dev
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
+          <div style={{ fontSize: 96, fontWeight: 800, lineHeight: 0.95, letterSpacing: -4 }}>
             Vitalii Popov
           </div>
-          <div style={{ fontSize: 30, color: "#9aa7b4", maxWidth: 820, lineHeight: 1.4 }}>
+          <div style={{ fontSize: 30, color: "#a09f98", maxWidth: 820, lineHeight: 1.4 }}>
             Senior Fullstack Engineer — live, inspectable projects: CMS platform, content API, real-time canvas, 3D/BIM.
           </div>
         </div>
@@ -50,10 +50,10 @@ export default function OpengraphImage() {
               key={t}
               style={{
                 fontSize: 24,
-                color: "#4c8dff",
-                background: "rgba(76,141,255,0.14)",
-                border: "1px solid rgba(76,141,255,0.4)",
-                borderRadius: 999,
+                color: "#ff5b2e",
+                background: "transparent",
+                border: "1px solid #3a3a40",
+                borderRadius: 0,
                 padding: "6px 22px",
               }}
             >
