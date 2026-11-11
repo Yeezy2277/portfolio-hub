@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="ui-monospace, Menlo, 'SF Mono', monospace">
+  <rect width="800" height="450" fill="#0d110e"/>
+  <!-- pipeline -->
+  <g font-size="12">
+    <rect x="24" y="36" width="140" height="56" rx="8" fill="#151b16" stroke="#2c342b"/>
+    <text x="40" y="60" fill="#97a294">CONTENTFUL</text>
+    <text x="40" y="78" fill="#e4e9e2">webhook</text>
+    <path d="M164 64 H196" stroke="#7fc492" stroke-width="2"/>
+    <rect x="196" y="36" width="170" height="56" rx="8" fill="#151b16" stroke="#2c342b"/>
+    <text x="212" y="60" fill="#97a294">RECEIVER</text>
+    <text x="212" y="78" fill="#e4e9e2">auth · filter · dedup</text>
+    <path d="M366 64 H398" stroke="#7fc492" stroke-width="2"/>
+    <rect x="398" y="36" width="120" height="56" rx="8" fill="#151b16" stroke="#2c342b"/>
+    <text x="414" y="60" fill="#97a294">QUEUE</text>
+    <text x="414" y="78" fill="#e4e9e2">at-least-once</text>
+    <path d="M518 64 H550" stroke="#7fc492" stroke-width="2"/>
+    <rect x="550" y="36" width="226" height="56" rx="8" fill="#151b16" stroke="#7fc492"/>
+    <text x="566" y="60" fill="#97a294">WORKER</text>
+    <text x="566" y="78" fill="#e4e9e2">rebuild · hash · write changed</text>
+  </g>
+  <!-- event log -->
+  <g font-size="13">
+    <text x="24" y="134" fill="#97a294" font-size="11" letter-spacing="1">RECENT EVENTS</text>
+    <rect x="24" y="148" width="752" height="1" fill="#2c342b"/>
+    <text x="24" y="176" fill="#97a294">07:31:47</text>
+    <rect x="104" y="162" width="74" height="20" rx="10" fill="#362a12"/><text x="116" y="176" fill="#e9b65b">deduped</text>
+    <text x="196" y="176" fill="#e4e9e2">already seen post:publish:v12</text>
+    <text x="24" y="210" fill="#97a294">07:31:45</text>
+    <rect x="104" y="196" width="74" height="20" rx="10" fill="#362a12"/><text x="116" y="210" fill="#e9b65b">ignored</text>
+    <text x="196" y="210" fill="#e4e9e2">auto_save doesn't change published content</text>
+    <text x="24" y="244" fill="#97a294">07:31:44</text>
+    <rect x="104" y="230" width="74" height="20" rx="10" fill="#1d3324"/><text x="116" y="244" fill="#7fc492">rebuilt</text>
+    <text x="196" y="244" fill="#e4e9e2">nothing changed, 12 files left as they were</text>
+    <text x="24" y="278" fill="#97a294">07:31:43</text>
+    <rect x="104" y="264" width="74" height="20" rx="10" fill="#1d3324"/><text x="116" y="278" fill="#7fc492">rebuilt</text>
+    <text x="196" y="278" fill="#e4e9e2">9 changed: rss.xml, feed.json, news-sitemap.xml…</text>
+  </g>
+  <!-- feeds -->
+  <g font-size="12" fill="#7fc492">
+    <text x="24" y="326" fill="#97a294" font-size="11" letter-spacing="1">FEEDS</text>
+    <rect x="24" y="340" width="752" height="1" fill="#2c342b"/>
+    <text x="24" y="368">/feeds/rss.xml</text>
+    <text x="214" y="368">/feeds/feed.json</text>
+    <text x="404" y="368">/feeds/news-sitemap.xml</text>
+    <text x="614" y="368">/feeds/sitemap.xml</text>
+    <text x="24" y="396">/feeds/tags/systems.xml</text>
+    <text x="264" y="396">/feeds/partners/flipboard.xml</text>
+    <text x="524" y="396">/feeds/partners/msn.xml</text>
+  </g>
+</svg>
