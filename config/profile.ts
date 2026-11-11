@@ -112,7 +112,7 @@ export const profile: Profile = {
   education: [
     {
       school: "Belgorod Shukhov State Technology University",
-      degree: "BSc, Information Technology",
+      degree: "BSc, Information Systems",
       period: "2018 – 2022",
     },
   ],
