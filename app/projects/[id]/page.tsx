@@ -43,7 +43,7 @@ export default async function ProjectPage({
   const canEmbed = project.embeddable && Boolean(project.liveUrl);
 
   return (
-    <main className={styles.page}>
+    <main id="main" className={styles.page}>
       <Link href="/" className={styles.back}>
         ← All projects
       </Link>
