@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getProjects } from "@/lib/projects";
 import { getProfile } from "@/lib/profile";
 import { ProjectGrid } from "@/components/ProjectGrid";
@@ -13,31 +14,50 @@ export default async function HomePage() {
   const [projects, profile] = await Promise.all([getProjects(), getProfile()]);
 
   return (
-    <main className={styles.page}>
-      <ThemeToggle />
-
-      <AboutHero profile={profile} />
-
-      <header className={styles.header}>
-        <h2 className={styles.title}>Projects</h2>
-        <p className={styles.intro}>
-          Each project lives in its own repo and deploys independently — this
-          page discovers them from GitHub and links out to the live apps.
-        </p>
+    <>
+      <header className={styles.site}>
+        <Link href="/" className={styles.mark} aria-label={`${profile.name}, home`}>
+          <span className={styles.square} aria-hidden="true" />
+          <span className={styles.markText}>vitaliipopov.dev</span>
+        </Link>
+        <nav aria-label="Site" className={styles.nav}>
+          <a href="#work">Work</a>
+          <Link href="/resume">Resume</Link>
+          <ThemeToggle />
+        </nav>
       </header>
 
-      {projects.length === 0 ? (
-        <p className={styles.empty}>
-          No projects yet. Tag a repository with the <code>portfolio</code> topic,
-          or add one to the local manifest.
-        </p>
-      ) : (
-        <ProjectGrid projects={projects} />
-      )}
+      <main id="main" className={styles.page} tabIndex={-1}>
+        <AboutHero profile={profile} />
+
+        <section id="work" aria-labelledby="work-h" className={styles.work}>
+          <div className={`${styles.header} reveal`} style={{ "--i": 8 } as React.CSSProperties}>
+            <p className="label">Index · {String(projects.length).padStart(2, "0")} projects</p>
+            <h2 id="work-h" className={styles.title}>
+              Live work, <span className={styles.thin}>inspectable end to end</span>
+            </h2>
+            <p className={styles.intro}>
+              Each project lives in its own repo and deploys independently. This page discovers them from GitHub and
+              links out to the running apps; every one has a demo you can drive without reading the code.
+            </p>
+          </div>
+
+          {projects.length === 0 ? (
+            <p className={styles.empty}>
+              No projects yet. Tag a repository with the <code>portfolio</code> topic, or add one to the local manifest.
+            </p>
+          ) : (
+            <ProjectGrid projects={projects} />
+          )}
+        </section>
+      </main>
 
       <footer className={styles.footer}>
-        Built with Next.js · auto-discovered from GitHub · deployed on Vercel
+        <span className="label">Next.js · auto-discovered from GitHub · Vercel</span>
+        <a href="https://github.com/Yeezy2277/portfolio-hub" className={styles.footLink}>
+          Source ↗
+        </a>
       </footer>
-    </main>
+    </>
   );
 }

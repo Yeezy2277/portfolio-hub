@@ -15,28 +15,27 @@ const linkExternal = (url: string) => url.startsWith("http");
 
 export function AboutHero({ profile }: { profile: Profile }) {
   return (
-    <header className={styles.about}>
+    <section className={styles.about} aria-labelledby="about-name">
       <div className={styles.top}>
         {profile.avatar ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img className={styles.photo} src={profile.avatar} alt={profile.name} />
+          <img className={`${styles.photo} reveal`} src={profile.avatar} alt={profile.name} />
         ) : (
-          <div className={styles.avatar} aria-hidden="true">
+          <div className={`${styles.avatar} reveal`} aria-hidden="true">
             {initials(profile.name)}
           </div>
         )}
 
         <div className={styles.identity}>
-          <h1 className={styles.name}>{profile.name}</h1>
-          <p className={styles.headline}>
-            {profile.headline} <span className={styles.dim}>· {profile.tagline}</span>
+          <p className={`label reveal ${styles.eyebrow}`} style={{ "--i": 1 } as React.CSSProperties}>
+            {profile.location} <span aria-hidden="true">/</span> {profile.timezone}
           </p>
-
-          <div className={styles.metaRow}>
-            <span className={styles.meta}>{profile.location}</span>
-            <span className={styles.dot}>·</span>
-            <span className={styles.meta}>{profile.timezone}</span>
-          </div>
+          <h1 id="about-name" className={`${styles.name} reveal`} style={{ "--i": 2 } as React.CSSProperties}>
+            {profile.name}
+          </h1>
+          <p className={`${styles.headline} reveal`} style={{ "--i": 3 } as React.CSSProperties}>
+            <strong>{profile.headline}</strong> <span className={styles.dim}>{profile.tagline}</span>
+          </p>
 
           {profile.available && (
             <div className={styles.availability}>
@@ -45,7 +44,7 @@ export function AboutHero({ profile }: { profile: Profile }) {
             </div>
           )}
 
-          <div className={styles.links}>
+          <div className={`${styles.links} reveal`} style={{ "--i": 4 } as React.CSSProperties}>
             <Link href="/resume" className={styles.resume}>
               Resume
             </Link>
@@ -66,26 +65,27 @@ export function AboutHero({ profile }: { profile: Profile }) {
         </div>
       </div>
 
-      <div className={styles.bio}>
+      <div className={`${styles.bio} reveal`} style={{ "--i": 5 } as React.CSSProperties}>
         {profile.bio.map((para, i) => (
           <p key={i}>{para}</p>
         ))}
       </div>
 
-      <div className={styles.stack}>
+      <ul className={`${styles.stack} reveal`} style={{ "--i": 6 } as React.CSSProperties} aria-label="Stack">
         {profile.stack.map((s) => (
-          <span key={s} className={styles.chip}>
+          <li key={s} className={styles.chip}>
             {s}
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
 
-      <div className={styles.grid}>
+      <div className={`${styles.grid} reveal`} style={{ "--i": 7 } as React.CSSProperties}>
         <section className={styles.col}>
           <h2 className={styles.colTitle}>Selected work</h2>
           <ol className={styles.roles}>
-            {profile.experience.map((role) => (
+            {profile.experience.map((role, i) => (
               <li key={role.company} className={styles.role}>
+                <span className={styles.roleIndex} aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                 <div className={styles.roleHead}>
                   <span className={styles.roleCompany}>{role.company}</span>
                   <span className={styles.rolePeriod}>{role.period}</span>
@@ -102,7 +102,7 @@ export function AboutHero({ profile }: { profile: Profile }) {
           </ol>
         </section>
 
-        <aside className={styles.side}>
+        <div className={styles.side}>
           <div className={styles.sideBlock}>
             <h2 className={styles.colTitle}>Certifications</h2>
             <ul className={styles.plainList}>
@@ -137,8 +137,8 @@ export function AboutHero({ profile }: { profile: Profile }) {
               ))}
             </ul>
           </div>
-        </aside>
+        </div>
       </div>
-    </header>
+    </section>
   );
 }

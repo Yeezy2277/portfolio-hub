@@ -49,6 +49,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
             <button
               type="button"
               className={activeTag === null ? `${styles.chip} ${styles.chipActive}` : styles.chip}
+              aria-pressed={activeTag === null}
               onClick={() => setActiveTag(null)}
             >
               All
@@ -58,6 +59,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
                 key={tag}
                 type="button"
                 className={activeTag === tag ? `${styles.chip} ${styles.chipActive}` : styles.chip}
+                aria-pressed={activeTag === tag}
                 onClick={() => setActiveTag((cur) => (cur === tag ? null : tag))}
               >
                 {tag}
@@ -67,14 +69,28 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
         )}
       </div>
 
+      <p className={`label ${styles.count}`} role="status" aria-live="polite">
+        {filtered.length === projects.length ? `Showing all ${projects.length}` : `${filtered.length} of ${projects.length} match`}
+      </p>
+
       {filtered.length === 0 ? (
-        <p className={styles.empty}>No projects match your filters.</p>
+        <p className={styles.empty}>
+          No projects match these filters.{" "}
+          <button type="button" className={styles.reset} onClick={() => { setQuery(""); setActiveTag(null); }}>
+            Clear filters
+          </button>
+        </p>
       ) : (
-        <section className={styles.grid}>
+        <div className={styles.grid}>
           {filtered.map((project) => (
-            <ProjectCard key={project.id} project={project} onPreview={setPreview} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={projects.indexOf(project) + 1}
+              onPreview={setPreview}
+            />
           ))}
-        </section>
+        </div>
       )}
 
       <PreviewModal project={preview} onClose={() => setPreview(null)} />

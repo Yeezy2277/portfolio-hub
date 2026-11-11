@@ -1,40 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-  <rect width="800" height="450" fill="#0b0f16"/>
-  <!-- ground grid -->
-  <g stroke="#1c2430" stroke-width="1">
-    <path d="M120 400 L400 340 L680 400"/>
-    <path d="M160 420 L400 360 L640 420"/>
-    <path d="M400 340 L400 100"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="'IBM Plex Mono', Menlo, monospace">
+  <defs>
+    <pattern id="minor" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#8fd3ff" stroke-opacity="0.08"/></pattern>
+    <pattern id="major" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#minor)"/><path d="M100 0H0V100" fill="none" stroke="#8fd3ff" stroke-opacity="0.16"/></pattern>
+  </defs>
+  <rect width="800" height="450" fill="#0a2342"/>
+  <rect width="800" height="450" fill="url(#major)"/>
+  <!-- header -->
+  <rect x="24" y="20" width="34" height="34" fill="none" stroke="#e6efff" stroke-width="2"/><text x="33" y="44" fill="#e6efff" font-size="20" font-weight="700" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif">#</text>
+  <text x="70" y="44" fill="#e6efff" font-size="30" font-weight="800" letter-spacing="1.5" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif">GIRDER</text>
+  <text x="168" y="44" fill="#a9bfdc" font-size="10" letter-spacing="2">BIM CLASH VIEWER</text>
+  <rect x="604" y="22" width="172" height="28" fill="none" stroke="#ff8a3d"/><rect x="616" y="33" width="6" height="6" fill="#ff8a3d" transform="rotate(45 619 36)"/><text x="632" y="41" fill="#ff8a3d" font-size="11" letter-spacing="1">26 OPEN CLASHES</text>
+  <!-- viewport -->
+  <rect x="24" y="68" width="520" height="290" fill="#0c2a4e" stroke="#2f5784"/>
+  <path d="M34 78 h22 M34 78 v22" stroke="#ff8a3d" stroke-width="2"/><path d="M534 348 h-22 M534 348 v-22" stroke="#ff8a3d" stroke-width="2"/>
+  <g stroke="#c9d6e8" stroke-opacity="0.5" fill="none">
+    <path d="M90 300 L300 330 L500 260 L290 236 Z"/><path d="M90 250 L300 280 L500 210 L290 186 Z"/><path d="M90 200 L300 230 L500 160 L290 136 Z"/>
+    <path d="M90 300 V200 M300 330 V230 M500 260 V160 M290 236 V136"/>
+    <path d="M195 315 V215 M400 295 V195 M190 268 V168 M395 211 V111"/>
   </g>
-  <!-- isometric frame: 3 storeys -->
-  <g stroke="#9aa5b1" stroke-width="2.5" fill="none" opacity="0.9">
-    <!-- base slab -->
-    <path d="M220 330 L400 288 L580 330 L400 372 Z" fill="#161b22" opacity="0.6"/>
-    <!-- columns -->
-    <line x1="240" y1="326" x2="240" y2="176"/><line x1="400" y1="290" x2="400" y2="140"/><line x1="560" y1="326" x2="560" y2="176"/>
-    <line x1="320" y1="308" x2="320" y2="158"/><line x1="480" y1="308" x2="480" y2="158"/>
-    <!-- level 2 slab -->
-    <path d="M240 226 L400 190 L560 226 L400 262 Z" fill="#161b22" opacity="0.5"/>
-    <!-- level 3 slab -->
-    <path d="M240 176 L400 140 L560 176 L400 212 Z" fill="#161b22" opacity="0.4"/>
-    <!-- beams -->
-    <path d="M240 226 L560 226 M240 176 L560 176"/>
+  <path d="M120 238 L470 196" stroke="#3fc6a4" stroke-width="7"/>
+  <path d="M150 212 L440 176" stroke="#7fb8ff" stroke-width="10"/>
+  <path d="M260 226 L330 217" stroke="#ff4d4d" stroke-width="12"/>
+  <path d="M240 202 L345 189" stroke="#ff8a3d" stroke-width="14"/>
+  <rect x="270" y="178" width="60" height="44" fill="#ff8a3d" fill-opacity="0.18" stroke="#ff8a3d" stroke-dasharray="4 3"/>
+  <!-- report -->
+  <rect x="556" y="68" width="220" height="290" fill="#0d2b50" stroke="#2f5784"/>
+  <text x="570" y="92" fill="#e6efff" font-size="14" font-weight="700" letter-spacing="2" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif">CLASH REPORT</text>
+  <line x1="570" y1="100" x2="762" y2="100" stroke="#2f5784"/>
+  <g font-size="9" letter-spacing="0.8"><rect x="570" y="108" width="34" height="16" fill="none" stroke="#2f5784"/><text x="577" y="119" fill="#a9bfdc">ALL</text><rect x="608" y="108" width="40" height="16" fill="none" stroke="#2f5784"/><text x="614" y="119" fill="#a9bfdc">HARD</text><rect x="652" y="108" width="68" height="16" fill="#ff8a3d" fill-opacity="0.18" stroke="#ff8a3d"/><text x="658" y="119" fill="#e6efff">CLEARANCE</text></g>
+  <g font-size="11">
+    <rect x="570" y="132" width="192" height="38" fill="#10335d" stroke="#ff8a3d"/><rect x="567" y="132" width="3" height="38" fill="#ff8a3d"/><text x="584" y="148" fill="#e6efff" font-weight="700" font-family="'Barlow Condensed', sans-serif" font-size="13">Supply duct main · L2</text><text x="584" y="162" fill="#a9bfdc" font-size="9">vs Beam B · 100 mm gap</text>
+    <rect x="570" y="176" width="192" height="38" fill="#10335d" stroke="#2f5784"/><text x="584" y="192" fill="#e6efff" font-weight="700" font-family="'Barlow Condensed', sans-serif" font-size="13">Supply duct main · L2</text><text x="584" y="206" fill="#a9bfdc" font-size="9">vs Beam C · 100 mm gap</text>
+    <rect x="570" y="220" width="192" height="38" fill="#10335d" stroke="#2f5784"/><text x="584" y="236" fill="#e6efff" font-weight="700" font-family="'Barlow Condensed', sans-serif" font-size="13">Return duct branch · L2</text><text x="584" y="250" fill="#a9bfdc" font-size="9">vs Slab · 2760 l</text>
   </g>
-  <!-- MEP pipes (teal/blue) -->
-  <g stroke-width="5" fill="none" stroke-linecap="round">
-    <path d="M270 250 L520 250" stroke="#2dd4bf"/>
-    <path d="M300 300 L500 300" stroke="#4c8dff"/>
-  </g>
-  <!-- clash marker -->
-  <circle cx="410" cy="250" r="26" fill="#e2564a" opacity="0.25"/>
-  <circle cx="410" cy="250" r="10" fill="#e2564a"/>
-  <path d="M402 242 l16 16 M418 242 l-16 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- labels -->
-  <text x="40" y="52" fill="#e6edf3" font-size="16" font-weight="700">Girder</text>
-  <text x="40" y="72" fill="#6b7787" font-size="12">BIM clash viewer</text>
-  <g font-size="12">
-    <rect x="600" y="36" width="160" height="26" rx="13" fill="rgba(226,86,74,0.14)" stroke="rgba(226,86,74,0.4)"/>
-    <circle cx="618" cy="49" r="4" fill="#e2564a"/>
-    <text x="630" y="53" fill="#e2564a">14 open clashes</text>
-  </g>
+  <rect x="570" y="322" width="96" height="24" fill="none" stroke="#e6efff"/><text x="582" y="338" fill="#e6efff" font-size="12" font-weight="700" letter-spacing="1.5" font-family="'Barlow Condensed', sans-serif">EXPORT CSV</text>
+  <!-- title block -->
+  <rect x="24" y="372" width="752" height="58" fill="#0d2b50" stroke="#e6efff" stroke-width="2"/>
+  <g font-size="8" letter-spacing="1.6" fill="#a9bfdc"><text x="36" y="390">PROJECT</text><text x="276" y="390">SHEET</text><text x="420" y="390">MODEL</text><text x="540" y="390">CLASHES</text><text x="670" y="390">STATUS</text></g>
+  <g stroke="#2f5784"><line x1="264" y1="374" x2="264" y2="428"/><line x1="408" y1="374" x2="408" y2="428"/><line x1="528" y1="374" x2="528" y2="428"/><line x1="658" y1="374" x2="658" y2="428"/></g>
+  <g font-size="15" font-weight="700" letter-spacing="1" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif" fill="#e6efff"><text x="36" y="414">GIRDER · 4-STOREY FRAME</text><text x="276" y="414">C-101 COORDINATION</text><text x="420" y="414">151 ELEMENTS</text><text x="540" y="414">14 HARD · 12 CLEAR.</text><text x="670" y="414" fill="#ff8a3d">26 OPEN</text></g>
 </svg>

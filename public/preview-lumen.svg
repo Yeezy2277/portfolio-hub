@@ -1,35 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-  <rect width="800" height="450" fill="#0d1117"/>
-  <rect x="24" y="24" width="752" height="402" rx="12" fill="#161b22" stroke="#2a313c"/>
-  <!-- header -->
-  <rect x="24" y="24" width="752" height="52" rx="12" fill="#1c2230"/>
-  <rect x="24" y="64" width="752" height="12" fill="#1c2230"/>
-  <line x1="24" y1="76" x2="776" y2="76" stroke="#2a313c"/>
-  <rect x="44" y="40" width="20" height="20" rx="6" fill="#4c8dff"/>
-  <text x="72" y="55" fill="#e6edf3" font-size="15" font-weight="700">Lumen</text>
-  <text x="700" y="55" fill="#9aa7b4" font-size="12" text-anchor="end">Articles</text>
-  <!-- hero -->
-  <text x="52" y="150" fill="#4c8dff" font-size="11" letter-spacing="2">THE LUMEN REVIEW</text>
-  <text x="52" y="188" fill="#e6edf3" font-size="30" font-weight="700">Writing on craft,</text>
-  <text x="52" y="224" fill="#e6edf3" font-size="30" font-weight="700">systems &amp; the work.</text>
-  <!-- cards -->
-  <g>
-    <rect x="52" y="262" width="215" height="140" rx="10" fill="#12161d" stroke="#2a313c"/>
-    <rect x="68" y="278" width="183" height="66" rx="6" fill="url(#g)"/>
-    <rect x="68" y="356" width="120" height="9" rx="4" fill="#4c8dff" opacity="0.5"/>
-    <rect x="68" y="374" width="150" height="7" rx="3" fill="#2a313c"/>
-    <rect x="288" y="262" width="215" height="140" rx="10" fill="#12161d" stroke="#2a313c"/>
-    <rect x="304" y="278" width="183" height="66" rx="6" fill="url(#g2)"/>
-    <rect x="304" y="356" width="140" height="9" rx="4" fill="#4c8dff" opacity="0.5"/>
-    <rect x="304" y="374" width="120" height="7" rx="3" fill="#2a313c"/>
-    <rect x="524" y="262" width="215" height="140" rx="10" fill="#12161d" stroke="#2a313c"/>
-    <rect x="540" y="278" width="183" height="66" rx="6" fill="url(#g3)"/>
-    <rect x="540" y="356" width="110" height="9" rx="4" fill="#4c8dff" opacity="0.5"/>
-    <rect x="540" y="374" width="150" height="7" rx="3" fill="#2a313c"/>
-  </g>
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c8dff" stop-opacity="0.4"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0.2"/></linearGradient>
-    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b5cff" stop-opacity="0.4"/><stop offset="1" stop-color="#4c8dff" stop-opacity="0.2"/></linearGradient>
-    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5b544" stop-opacity="0.35"/><stop offset="1" stop-color="#4c8dff" stop-opacity="0.2"/></linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="Newsreader, 'Iowan Old Style', Georgia, serif">
+  <rect width="800" height="450" fill="#f4efe4"/>
+  <text x="32" y="46" fill="#1a1714" font-size="32" font-weight="800" font-style="italic" font-family="Fraunces, Georgia, serif" letter-spacing="-1">Lumen</text>
+  <text x="138" y="44" fill="#b3121f" font-size="10" letter-spacing="2" font-family="'IBM Plex Mono', monospace">THE REVIEW</text>
+  <text x="620" y="44" fill="#655c50" font-size="10" letter-spacing="2" font-family="'IBM Plex Mono', monospace">ARTICLES</text>
+  <rect x="0" y="62" width="800" height="2" fill="#1a1714"/><rect x="0" y="67" width="800" height="1" fill="#1a1714"/>
+  <text x="32" y="100" fill="#b3121f" font-size="10" letter-spacing="2" font-family="'IBM Plex Mono', monospace">THE LUMEN REVIEW · FRONT PAGE</text>
+  <text x="32" y="150" fill="#1a1714" font-size="44" font-weight="300" font-family="Fraunces, Georgia, serif" letter-spacing="-1.5">Writing on <tspan font-weight="800" font-style="italic" fill="#b3121f">craft</tspan>, systems,</text>
+  <text x="32" y="196" fill="#1a1714" font-size="44" font-weight="300" font-family="Fraunces, Georgia, serif" letter-spacing="-1.5">and the work behind the screen.</text>
+  <text x="32" y="226" fill="#3b342c" font-size="15" font-style="italic">A demo publication powered by a headless CMS.</text>
+  <rect x="32" y="244" width="736" height="1" fill="#d8cfbe"/>
+  <rect x="32" y="262" width="736" height="4" fill="#1a1714"/>
+  <rect x="32" y="276" width="400" height="150" fill="#fbf8f1"/>
+  <g stroke="#d8cfbe"><line x1="32" y1="300" x2="432" y2="300"/><line x1="32" y1="324" x2="432" y2="324"/><line x1="32" y1="348" x2="432" y2="348"/><line x1="32" y1="372" x2="432" y2="372"/><line x1="32" y1="396" x2="432" y2="396"/></g>
+  <text x="196" y="402" fill="#b3121f" font-size="130" font-weight="800" font-style="italic" font-family="Fraunces, Georgia, serif">W</text>
+  <text x="456" y="296" fill="#b3121f" font-size="10" letter-spacing="2" font-family="'IBM Plex Mono', monospace">SYSTEMS</text>
+  <text x="456" y="334" fill="#1a1714" font-size="30" font-weight="800" font-family="Fraunces, Georgia, serif" letter-spacing="-1">When a webhook</text>
+  <text x="456" y="366" fill="#1a1714" font-size="30" font-weight="800" font-family="Fraunces, Georgia, serif" letter-spacing="-1">calls itself</text>
+  <text x="456" y="394" fill="#3b342c" font-size="14" font-style="italic">A sync job writes back to the CMS, and the</text>
+  <text x="456" y="412" fill="#3b342c" font-size="14" font-style="italic">loop runs all night. How to design it out.</text>
 </svg>
