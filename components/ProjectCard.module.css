@@ -3,14 +3,15 @@
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.card:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+/* Lifts onto a hard offset shadow, like a card pulled from an index drawer. */
+.card:hover,
+.card:focus-within {
+  border-color: var(--text);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--accent);
 }
 
 .featured {
@@ -23,21 +24,21 @@
   width: 100%;
   padding: 0;
   aspect-ratio: 16 / 9;
-  /* Previews are dark-app screenshots — keep a fixed dark viewport in both
-     themes so they read as intentional framed shots, not a stray dark block. */
-  background: #0d1117;
+  /* Previews are app screenshots; a fixed dark frame keeps them reading as framed shots in both themes. */
+  background: #0c0c0e;
   border: none;
   border-bottom: 1px solid var(--border);
   cursor: pointer;
-}
-
-/* In light mode, a soft inset edge separates the dark shot from the light card. */
-:root[data-theme="light"] .thumb {
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
 .thumb img {
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .thumb img {
+  transform: scale(1.02);
 }
 
 .thumbFallback {
@@ -45,100 +46,122 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: var(--text-muted);
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  color: #a09f98;
+  font: 800 2.4rem var(--display);
 }
 
 .thumbHint {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(13, 17, 23, 0.55);
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  left: 12px;
+  bottom: 12px;
+  padding: 4px 9px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font: 700 0.72rem var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   opacity: 0;
-  transition: opacity 0.15s ease;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .thumb:hover .thumbHint,
 .thumb:focus-visible .thumbHint {
   opacity: 1;
+  transform: none;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px 18px 18px;
+  gap: 10px;
+  padding: 18px 20px 20px;
   flex: 1;
 }
 
 .titleRow {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   gap: 12px;
+}
+
+.index {
+  font: 700 0.8rem var(--mono);
+  color: var(--accent);
 }
 
 .title {
   margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
+  flex: 1;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.featured .title {
+  font-size: 1.9rem;
 }
 
 .stars {
+  font: 400 0.78rem var(--mono);
   color: var(--text-muted);
-  font-size: 0.8rem;
   white-space: nowrap;
 }
 
 .summary {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.97rem;
+  line-height: 1.55;
 }
 
 .tags {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 2px;
 }
 
 .tag {
-  font-size: 0.72rem;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 999px;
-  padding: 2px 9px;
+  font: 400 0.72rem var(--mono);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
 }
 
 .links {
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 18px;
   margin-top: auto;
-  padding-top: 12px;
-  font-size: 0.85rem;
+  padding-top: 14px;
+  font: 500 0.82rem var(--mono);
 }
 
 .links a {
-  color: var(--accent);
-  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
-@media (max-width: 640px) {
+.links .live {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 720px) {
   .featured {
     grid-column: span 1;
+  }
+  .featured .title {
+    font-size: 1.5rem;
   }
 }

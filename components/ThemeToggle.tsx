@@ -36,7 +36,7 @@ export function ThemeToggle() {
       aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
       title={theme === "light" ? "Dark theme" : "Light theme"}
     >
-      {theme === null ? "◐" : theme === "dark" ? "☀" : "☾"}
+      <span aria-hidden="true">{theme === null ? "◐" : theme === "dark" ? "☀" : "☾"}</span>
     </button>
   );
 }

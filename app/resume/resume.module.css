@@ -3,15 +3,15 @@
    one place. */
 
 .screen {
-  --r-back: #33404e;
+  --r-back: #2a2924;
   --r-sheet: #ffffff;
-  --r-text: #1a2230;
-  --r-soft: #2c3745;
-  --r-muted: #45505f;
-  --r-dim: #6b7787;
-  --r-accent: #2f6fe4;
-  --r-rule: #e3e8ee;
-  --r-head: #1a2230;
+  --r-text: #141414;
+  --r-soft: #2b2a26;
+  --r-muted: #4a4842;
+  --r-dim: #66635b;
+  --r-accent: #b4370a;
+  --r-rule: #e4dfd3;
+  --r-head: #141414;
   min-height: 100vh;
   background: var(--r-back);
   padding: 28px 16px 60px;
@@ -19,15 +19,15 @@
 }
 
 :global([data-theme="dark"]) .screen {
-  --r-back: #0d1117;
-  --r-sheet: #161b22;
-  --r-text: #e6edf3;
-  --r-soft: #cdd6e0;
-  --r-muted: #9aa7b4;
-  --r-dim: #7c8896;
-  --r-accent: #6ea3ff;
-  --r-rule: #262e39;
-  --r-head: #e6edf3;
+  --r-back: #0c0c0e;
+  --r-sheet: #161618;
+  --r-text: #ecebe6;
+  --r-soft: #d6d4cc;
+  --r-muted: #a09f98;
+  --r-dim: #8a8982;
+  --r-accent: #ff7a45;
+  --r-rule: #2a2a2e;
+  --r-head: #ecebe6;
 }
 
 .toolbar {
@@ -40,12 +40,12 @@
 }
 
 .back {
-  color: #cdd6e2;
+  color: #d6d4cc;
   font-size: 0.9rem;
 }
 
 :global([data-theme="light"]) .back {
-  color: #cdd6e2;
+  color: #d6d4cc;
 }
 
 .back:hover {
@@ -60,31 +60,34 @@
 .themeBtn {
   width: 38px;
   height: 38px;
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.06);
-  color: #e6edf3;
+  color: #ecebe6;
   font-size: 15px;
   cursor: pointer;
 }
 
 .themeBtn:hover {
-  border-color: #4c8dff;
+  border-color: var(--accent);
 }
 
 .print {
   padding: 9px 18px;
-  border-radius: 8px;
+  border-radius: 0;
   border: none;
-  background: #4c8dff;
-  color: #fff;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
 }
 
 .print:hover {
-  background: #3a7cf0;
+  filter: brightness(1.08);
 }
 
 .sheet {
@@ -93,7 +96,7 @@
   background: var(--r-sheet);
   color: var(--r-text);
   padding: 0.62in 0.7in;
-  border-radius: 6px;
+  border-radius: 2px;
   box-shadow: 0 12px 44px rgba(0, 0, 0, 0.34);
   font-size: 10.6pt;
   line-height: 1.42;
@@ -274,13 +277,13 @@
   .screen {
     --r-back: #fff;
     --r-sheet: #fff;
-    --r-text: #1a2230;
-    --r-soft: #2c3745;
-    --r-muted: #45505f;
-    --r-dim: #6b7787;
-    --r-accent: #2f6fe4;
-    --r-rule: #e3e8ee;
-    --r-head: #1a2230;
+    --r-text: #141414;
+    --r-soft: #2b2a26;
+    --r-muted: #4a4842;
+    --r-dim: #66635b;
+    --r-accent: #b4370a;
+    --r-rule: #e4dfd3;
+    --r-head: #141414;
     background: #fff;
     padding: 0;
   }
