@@ -1,50 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="ui-monospace, Menlo, 'SF Mono', monospace">
-  <rect width="800" height="450" fill="#0d110e"/>
-  <!-- pipeline -->
-  <g font-size="12">
-    <rect x="24" y="36" width="140" height="56" rx="8" fill="#151b16" stroke="#2c342b"/>
-    <text x="40" y="60" fill="#97a294">CONTENTFUL</text>
-    <text x="40" y="78" fill="#e4e9e2">webhook</text>
-    <path d="M164 64 H196" stroke="#7fc492" stroke-width="2"/>
-    <rect x="196" y="36" width="170" height="56" rx="8" fill="#151b16" stroke="#2c342b"/>
-    <text x="212" y="60" fill="#97a294">RECEIVER</text>
-    <text x="212" y="78" fill="#e4e9e2">auth · filter · dedup</text>
-    <path d="M366 64 H398" stroke="#7fc492" stroke-width="2"/>
-    <rect x="398" y="36" width="120" height="56" rx="8" fill="#151b16" stroke="#2c342b"/>
-    <text x="414" y="60" fill="#97a294">QUEUE</text>
-    <text x="414" y="78" fill="#e4e9e2">at-least-once</text>
-    <path d="M518 64 H550" stroke="#7fc492" stroke-width="2"/>
-    <rect x="550" y="36" width="226" height="56" rx="8" fill="#151b16" stroke="#7fc492"/>
-    <text x="566" y="60" fill="#97a294">WORKER</text>
-    <text x="566" y="78" fill="#e4e9e2">rebuild · hash · write changed</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="'JetBrains Mono', Menlo, monospace">
+  <defs>
+    <pattern id="rule" width="800" height="28" patternUnits="userSpaceOnUse"><rect y="27" width="800" height="1" fill="#4fe38b" opacity="0.06"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="800" height="450" fill="#060d09"/>
+  <rect width="800" height="450" fill="url(#rule)"/>
+  <circle cx="34" cy="38" r="4" fill="#4fe38b"/>
+  <text x="46" y="42" fill="#8aa594" font-size="11" letter-spacing="2.4">FEEDS DESK · LIVE</text>
+  <text x="26" y="118" fill="#4fe38b" font-size="86" font-weight="800" letter-spacing="-5" opacity="0.35" filter="url(#glow)">Wire</text>
+  <text x="26" y="118" fill="#cfe8d6" font-size="86" font-weight="800" letter-spacing="-5">Wire</text>
+  <rect x="248" y="58" width="30" height="62" fill="#4fe38b"/>
+  <text x="28" y="152" fill="#8aa594" font-size="13">Contentful webhooks → verified receiver → queue → idempotent worker → feeds</text>
+  <!-- tape -->
+  <rect x="24" y="178" width="752" height="96" fill="#0b1610" stroke="#183324"/>
+  <g fill="#040906">
+    <circle cx="40" cy="186" r="3"/><circle cx="56" cy="186" r="3"/><circle cx="72" cy="186" r="3"/><circle cx="88" cy="186" r="3"/><circle cx="104" cy="186" r="3"/><circle cx="120" cy="186" r="3"/><circle cx="136" cy="186" r="3"/><circle cx="152" cy="186" r="3"/><circle cx="168" cy="186" r="3"/><circle cx="184" cy="186" r="3"/><circle cx="200" cy="186" r="3"/><circle cx="216" cy="186" r="3"/><circle cx="232" cy="186" r="3"/><circle cx="248" cy="186" r="3"/><circle cx="264" cy="186" r="3"/><circle cx="280" cy="186" r="3"/><circle cx="296" cy="186" r="3"/><circle cx="312" cy="186" r="3"/><circle cx="328" cy="186" r="3"/><circle cx="344" cy="186" r="3"/><circle cx="360" cy="186" r="3"/><circle cx="376" cy="186" r="3"/><circle cx="392" cy="186" r="3"/><circle cx="408" cy="186" r="3"/><circle cx="424" cy="186" r="3"/><circle cx="440" cy="186" r="3"/><circle cx="456" cy="186" r="3"/><circle cx="472" cy="186" r="3"/><circle cx="488" cy="186" r="3"/><circle cx="504" cy="186" r="3"/><circle cx="520" cy="186" r="3"/><circle cx="536" cy="186" r="3"/><circle cx="552" cy="186" r="3"/><circle cx="568" cy="186" r="3"/><circle cx="584" cy="186" r="3"/><circle cx="600" cy="186" r="3"/><circle cx="616" cy="186" r="3"/><circle cx="632" cy="186" r="3"/><circle cx="648" cy="186" r="3"/><circle cx="664" cy="186" r="3"/><circle cx="680" cy="186" r="3"/><circle cx="696" cy="186" r="3"/><circle cx="712" cy="186" r="3"/><circle cx="728" cy="186" r="3"/><circle cx="744" cy="186" r="3"/><circle cx="760" cy="186" r="3"/>
   </g>
-  <!-- event log -->
-  <g font-size="13">
-    <text x="24" y="134" fill="#97a294" font-size="11" letter-spacing="1">RECENT EVENTS</text>
-    <rect x="24" y="148" width="752" height="1" fill="#2c342b"/>
-    <text x="24" y="176" fill="#97a294">07:31:47</text>
-    <rect x="104" y="162" width="74" height="20" rx="10" fill="#362a12"/><text x="116" y="176" fill="#e9b65b">deduped</text>
-    <text x="196" y="176" fill="#e4e9e2">already seen post:publish:v12</text>
-    <text x="24" y="210" fill="#97a294">07:31:45</text>
-    <rect x="104" y="196" width="74" height="20" rx="10" fill="#362a12"/><text x="116" y="210" fill="#e9b65b">ignored</text>
-    <text x="196" y="210" fill="#e4e9e2">auto_save doesn't change published content</text>
-    <text x="24" y="244" fill="#97a294">07:31:44</text>
-    <rect x="104" y="230" width="74" height="20" rx="10" fill="#1d3324"/><text x="116" y="244" fill="#7fc492">rebuilt</text>
-    <text x="196" y="244" fill="#e4e9e2">nothing changed, 12 files left as they were</text>
-    <text x="24" y="278" fill="#97a294">07:31:43</text>
-    <rect x="104" y="264" width="74" height="20" rx="10" fill="#1d3324"/><text x="116" y="278" fill="#7fc492">rebuilt</text>
-    <text x="196" y="278" fill="#e4e9e2">9 changed: rss.xml, feed.json, news-sitemap.xml…</text>
+  <g font-size="12" fill="#cfe8d6">
+    <text x="40" y="236"><tspan fill="#4fe38b" font-weight="800">01</tspan> webhook</text>
+    <text x="180" y="236"><tspan fill="#4fe38b" font-weight="800">02</tspan> receiver: auth·dedup</text>
+    <text x="388" y="236"><tspan fill="#4fe38b" font-weight="800">03</tspan> queue</text>
+    <text x="496" y="236"><tspan fill="#4fe38b" font-weight="800">04</tspan> worker: hash·write</text>
+    <text x="690" y="236"><tspan fill="#4fe38b" font-weight="800">05</tspan> /feeds</text>
   </g>
-  <!-- feeds -->
-  <g font-size="12" fill="#7fc492">
-    <text x="24" y="326" fill="#97a294" font-size="11" letter-spacing="1">FEEDS</text>
-    <rect x="24" y="340" width="752" height="1" fill="#2c342b"/>
-    <text x="24" y="368">/feeds/rss.xml</text>
-    <text x="214" y="368">/feeds/feed.json</text>
-    <text x="404" y="368">/feeds/news-sitemap.xml</text>
-    <text x="614" y="368">/feeds/sitemap.xml</text>
-    <text x="24" y="396">/feeds/tags/systems.xml</text>
-    <text x="264" y="396">/feeds/partners/flipboard.xml</text>
-    <text x="524" y="396">/feeds/partners/msn.xml</text>
+  <!-- log -->
+  <g font-size="10" fill="#8aa594" letter-spacing="1.6"><text x="24" y="306">WHEN</text><text x="110" y="306">STAGE</text><text x="200" y="306">OUTCOME</text><text x="320" y="306">DETAIL</text></g>
+  <rect x="24" y="314" width="752" height="1" fill="#cfe8d6" opacity="0.6"/>
+  <g font-size="12" fill="#cfe8d6">
+    <text x="24" y="340" fill="#8aa594">21:52:59</text><text x="110" y="340">worker</text><rect x="200" y="328" width="66" height="18" fill="#10301d" stroke="#4fe38b"/><text x="207" y="341" fill="#4fe38b">rebuilt</text><text x="320" y="340" fill="#8aa594">3 file(s) changed, 9 untouched · 41 ms</text>
+    <text x="24" y="372" fill="#8aa594">21:52:58</text><text x="110" y="372">receiver</text><rect x="200" y="360" width="66" height="18" fill="#33260f" stroke="#f0b860"/><text x="207" y="373" fill="#f0b860">deduped</text><text x="320" y="372" fill="#8aa594">already seen in the last 5 min</text>
+    <text x="24" y="404" fill="#8aa594">21:52:57</text><text x="110" y="404">receiver</text><rect x="200" y="392" width="66" height="18" fill="#10301d" stroke="#4fe38b"/><text x="207" y="405" fill="#4fe38b">queued</text><text x="320" y="404" fill="#8aa594">job handed to the worker</text>
   </g>
 </svg>
