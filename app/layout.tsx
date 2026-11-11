@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Vitalii Popov — Senior Frontend Engineer";
+const title = "Vitalii Popov — Senior Fullstack Engineer";
 const description =
-  "Senior Frontend Engineer (React · Next.js · TypeScript · Contentful). Live, inspectable projects — CMS platform, real-time canvas, 3D/BIM. Remote, US-hours friendly.";
+  "Senior Fullstack Engineer (React · Node.js · TypeScript · Contentful). Live, inspectable projects — CMS platform, content API, real-time canvas, 3D/BIM. Remote, US business hours.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://vitaliipopov.dev"),
