@@ -7,7 +7,7 @@ Copy-paste ready. LinkedIn has two places these belong:
 
 Set your headline first (it's the single most-read line):
 
-> **Headline:** Senior Frontend Engineer · React · Next.js · TypeScript · Headless CMS (Contentful) · Open to remote US roles
+> **Headline:** Senior Fullstack Engineer | React · Node.js (NestJS/Express) · TypeScript | Contentful Certified | Remote, US business hours
 
 For every Project entry, LinkedIn asks for: **Name**, **Description**, **Project URL**, **Skills**, and optionally **Associated with** (link to the Internetica/Sberbank experience) + dates. Use `2024–Present` for the portfolio builds.
 
