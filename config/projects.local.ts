@@ -11,6 +11,21 @@ import type { Project } from "@/lib/types";
  */
 export const localProjects: Project[] = [
   {
+    id: "wire",
+    title: "Wire — feeds pipeline",
+    summary:
+      "An event-driven feeds pipeline: Contentful webhooks → verified receiver (filter, dedup) → queue → idempotent Node worker that rebuilds RSS, JSON Feed, Google News and partner feeds and writes only what changed. A rebuild of production work for a news publisher; the demo replays real webhook traffic.",
+    liveUrl: "https://wire.vitaliipopov.dev",
+    repoUrl: "https://github.com/Yeezy2277/wire",
+    image: "/preview-wire.svg",
+    tags: ["Node.js", "TypeScript", "Event-driven", "Upstash", "Contentful"],
+    embeddable: true,
+    featured: true,
+    hidden: false,
+    order: -1,
+    stars: 0,
+  },
+  {
     id: "cms-blog",
     title: "Lumen",
     summary:
