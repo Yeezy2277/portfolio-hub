@@ -7,10 +7,10 @@
 
 <h1 align="center">Vitalii Popov</h1>
 <p align="center">
-  <b>Senior Frontend Engineer</b> · React · Next.js · TypeScript · Headless CMS (Contentful)
+  <b>Senior Fullstack Engineer</b> · React · Node.js · TypeScript · Headless CMS (Contentful)
 </p>
 <p align="center">
-  São Paulo, Brazil · Remote, UTC-3 (full US East Coast overlap) · open to full-time or B2B contract
+  São Paulo, Brazil · Remote, UTC-3 (full US business-hours overlap)
 </p>
 <p align="center">
   <a href="https://vitaliipopov.dev">Portfolio</a> ·
@@ -29,9 +29,8 @@
 
 ---
 
-I own the frontend end-to-end — architecture, performance, and the CI/CD pipeline that
-ships it. Most of my recent production work is a Contentful media platform under NDA, so I
-rebuilt its *shape* in public: everything below is live, inspectable, and running on free
+I own features end-to-end: React UI, Node.js API, the service behind it and the release.
+Most of my production work is under NDA, so I rebuilt the patterns in public: everything below is live, inspectable, and running on free
 infrastructure (Vercel + Contentful + GitHub Actions).
 
 **→ Everything in one place: [vitaliipopov.dev](https://vitaliipopov.dev)**
