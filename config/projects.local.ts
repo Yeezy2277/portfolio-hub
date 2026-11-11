@@ -11,6 +11,21 @@ import type { Project } from "@/lib/types";
  */
 export const localProjects: Project[] = [
   {
+    id: "podium",
+    title: "Podium — promo back office",
+    summary:
+      "A multi-tenant back office for e-commerce leaderboard promotions: NestJS + Prisma API, React/MUI admin. Brand-level access enforced per request, a scheduled campaign lifecycle with stale-task protection, admin-local time zones, money in minor units and a single-query RANK() leaderboard. Sign in as four demo roles.",
+    liveUrl: "https://podium.vitaliipopov.dev",
+    repoUrl: "https://github.com/Yeezy2277/podium",
+    image: "/preview-podium.svg",
+    tags: ["NestJS", "Prisma", "React", "MUI", "PostgreSQL"],
+    embeddable: true,
+    featured: true,
+    hidden: false,
+    order: -2,
+    stars: 0,
+  },
+  {
     id: "wire",
     title: "Wire — feeds pipeline",
     summary:
