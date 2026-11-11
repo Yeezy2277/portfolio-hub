@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="800" height="450" fill="#f4f5f8"/>
+  <!-- app bar -->
+  <rect width="800" height="52" fill="#ffffff"/>
+  <rect y="52" width="800" height="1" fill="#dde1e8"/>
+  <text x="24" y="33" fill="#172031" font-size="18" font-weight="700">Podium</text>
+  <text x="104" y="33" fill="#5b6577" font-size="13">Acme Outfitters</text>
+  <rect x="498" y="18" width="104" height="22" rx="11" fill="#e8eaf0"/><text x="512" y="33" fill="#172031" font-size="12">Brand manager</text>
+  <rect x="610" y="18" width="134" height="22" rx="11" fill="none" stroke="#c4c9d4"/><text x="622" y="33" fill="#172031" font-size="12">America/Sao_Paulo</text>
+  <!-- title -->
+  <text x="24" y="92" fill="#172031" font-size="22" font-weight="700">November Top Spenders</text>
+  <rect x="300" y="75" width="40" height="22" rx="11" fill="#2e7d32"/><text x="309" y="90" fill="#fff" font-size="12">live</text>
+  <!-- facts -->
+  <rect x="24" y="110" width="752" height="62" rx="6" fill="#ffffff" stroke="#dde1e8"/>
+  <text x="40" y="132" fill="#5b6577" font-size="11">Starts (America/Sao_Paulo)</text><text x="40" y="154" fill="#172031" font-size="14">Nov 1, 2026, 12:00 AM</text>
+  <text x="260" y="132" fill="#5b6577" font-size="11">Brands</text><text x="260" y="154" fill="#172031" font-size="14">Acme US</text>
+  <text x="420" y="132" fill="#5b6577" font-size="11">Ranks by</text><text x="420" y="154" fill="#172031" font-size="14">Total spend</text>
+  <text x="580" y="132" fill="#5b6577" font-size="11">Prize pool</text><text x="580" y="154" fill="#172031" font-size="14">$600.00 · 5 places</text>
+  <!-- leaderboard -->
+  <rect x="24" y="186" width="752" height="244" rx="6" fill="#ffffff" stroke="#dde1e8"/>
+  <g font-size="13" fill="#172031">
+    <text x="40" y="212" fill="#5b6577" font-size="12">#</text><text x="80" y="212" fill="#5b6577" font-size="12">Customer</text>
+    <text x="500" y="212" fill="#5b6577" font-size="12" text-anchor="end">Spend</text><text x="580" y="212" fill="#5b6577" font-size="12" text-anchor="end">Orders</text><text x="610" y="212" fill="#5b6577" font-size="12">Prize</text>
+    <rect x="24" y="224" width="752" height="1" fill="#dde1e8"/>
+    <text x="40" y="250">1</text><text x="80" y="250">Lena L.</text><text x="500" y="250" text-anchor="end">$3,831.82</text><text x="580" y="250" text-anchor="end">29</text><text x="610" y="250">$250.00 coupon</text>
+    <text x="40" y="284">2</text><text x="80" y="284">Carla C.</text><text x="500" y="284" text-anchor="end">$1,251.81</text><text x="580" y="284" text-anchor="end">9</text><text x="610" y="284">$150.00 coupon</text>
+    <text x="40" y="318">3</text><text x="80" y="318">Otto P.</text><text x="500" y="318" text-anchor="end">$1,201.09</text><text x="580" y="318" text-anchor="end">9</text><text x="610" y="318">$100.00 coupon</text>
+    <text x="40" y="352">4</text><text x="80" y="352">Tom P.</text><text x="500" y="352" text-anchor="end">$1,118.89</text><text x="580" y="352" text-anchor="end">9</text><text x="610" y="352">$50.00 coupon</text>
+    <text x="40" y="386">5</text><text x="80" y="386">Kai M.</text><text x="500" y="386" text-anchor="end">$928.33</text><text x="580" y="386" text-anchor="end">6</text><text x="610" y="386">$50.00 coupon</text>
+  </g>
+  <text x="760" y="418" fill="#5b6577" font-size="11" text-anchor="end">1–10 of 39</text>
+</svg>
