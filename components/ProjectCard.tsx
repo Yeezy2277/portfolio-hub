@@ -8,9 +8,12 @@ import styles from "./ProjectCard.module.css";
 
 export function ProjectCard({
   project,
+  index,
   onPreview,
 }: {
   project: Project;
+  /** Position in the full index, stable while filtering. */
+  index: number;
   onPreview: (project: Project) => void;
 }) {
   const image = previewImage(project);
@@ -35,36 +38,37 @@ export function ProjectCard({
         ) : (
           <span className={styles.thumbFallback}>{project.title.charAt(0)}</span>
         )}
-        <span className={styles.thumbHint}>Preview</span>
+        <span className={styles.thumbHint} aria-hidden="true">Preview</span>
       </button>
 
       <div className={styles.body}>
         <div className={styles.titleRow}>
-          <h2 className={styles.title}>{project.title}</h2>
+          <span className={styles.index} aria-hidden="true">{String(index).padStart(2, "0")}</span>
+          <h3 className={styles.title}>{project.title}</h3>
           {project.stars > 0 && <span className={styles.stars}>★ {project.stars}</span>}
         </div>
 
         {project.summary && <p className={styles.summary}>{project.summary}</p>}
 
         {project.tags.length > 0 && (
-          <div className={styles.tags}>
+          <ul className={styles.tags} aria-label="Tags">
             {project.tags.map((tag) => (
-              <span key={tag} className={styles.tag}>
+              <li key={tag} className={styles.tag}>
                 {tag}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
 
         <div className={styles.links}>
-          <Link href={`/projects/${project.id}`}>Details →</Link>
+          <Link href={`/projects/${project.id}`} aria-label={`${project.title} details`}>Details →</Link>
           {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.live} aria-label={`${project.title} live app (opens in a new tab)`}>
               Live ↗
             </a>
           )}
           {project.repoUrl && (
-            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} source code (opens in a new tab)`}>
               Code ↗
             </a>
           )}

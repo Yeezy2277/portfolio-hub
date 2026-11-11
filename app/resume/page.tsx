@@ -31,7 +31,7 @@ export default async function ResumePage() {
         <ResumeToolbar />
       </div>
 
-      <main className={styles.sheet}>
+      <main id="main" className={styles.sheet}>
         <header className={styles.head}>
           <h1 className={styles.name}>{p.name}</h1>
           <p className={styles.headline}>
