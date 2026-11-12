@@ -40,7 +40,7 @@ export default function OpengraphImage() {
             Vitalii Popov
           </div>
           <div style={{ fontSize: 30, color: "#a09f98", maxWidth: 820, lineHeight: 1.4 }}>
-            Senior Fullstack Engineer — live, inspectable projects: CMS platform, content API, real-time canvas, 3D/BIM.
+            Senior Frontend Engineer. Live public rebuilds of NDA work: Contentful apps, feeds, back office, real-time, 3D.
           </div>
         </div>
 
