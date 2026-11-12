@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Portfolio — projects";
+export const alt = "Vitalii Popov, portfolio projects";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

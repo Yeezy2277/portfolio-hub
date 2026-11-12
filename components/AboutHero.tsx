@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CERT_LINKS, type Profile } from "@/config/profile";
 import styles from "./AboutHero.module.css";
+import { Icon } from "@/components/Icon";
 
 function initials(name: string): string {
   return name
@@ -58,7 +59,7 @@ export function AboutHero({ profile }: { profile: Profile }) {
                   : {})}
               >
                 {l.label}
-                {linkExternal(l.url) ? " ↗" : ""}
+                {linkExternal(l.url) ? <> <Icon name="arrowUpRight" size={13} /></> : null}
               </a>
             ))}
           </div>
@@ -94,7 +95,7 @@ export function AboutHero({ profile }: { profile: Profile }) {
                 <p className={styles.roleSummary}>{role.summary}</p>
                 {role.href && (
                   <a className={styles.roleLink} href={role.href}>
-                    {role.hrefLabel ?? "Details →"}
+                    {role.hrefLabel ?? "Details"} <Icon name="arrowRight" size={13} />
                   </a>
                 )}
               </li>

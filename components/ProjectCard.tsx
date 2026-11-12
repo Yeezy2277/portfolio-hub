@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Project } from "@/lib/types";
 import { previewImage } from "@/lib/preview";
 import styles from "./ProjectCard.module.css";
+import { Icon } from "@/components/Icon";
 
 export function ProjectCard({
   project,
@@ -45,7 +46,7 @@ export function ProjectCard({
         <div className={styles.titleRow}>
           <span className={styles.index} aria-hidden="true">{String(index).padStart(2, "0")}</span>
           <h3 className={styles.title}>{project.title}</h3>
-          {project.stars > 0 && <span className={styles.stars}>★ {project.stars}</span>}
+          {project.stars > 0 && <span className={styles.stars} aria-label={`${project.stars} GitHub stars`}><Icon name="star" size={13} /> {project.stars}</span>}
         </div>
 
         {project.summary && <p className={styles.summary}>{project.summary}</p>}
@@ -61,15 +62,15 @@ export function ProjectCard({
         )}
 
         <div className={styles.links}>
-          <Link href={`/projects/${project.id}`} aria-label={`${project.title} details`}>Details →</Link>
+          <Link href={`/projects/${project.id}`} aria-label={`${project.title} details`}>Details <Icon name="arrowRight" size={13} /></Link>
           {project.liveUrl && (
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.live} aria-label={`${project.title} live app (opens in a new tab)`}>
-              Live ↗
+              Live <Icon name="arrowUpRight" size={13} />
             </a>
           )}
           {project.repoUrl && (
             <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} source code (opens in a new tab)`}>
-              Code ↗
+              Code <Icon name="arrowUpRight" size={13} />
             </a>
           )}
         </div>
