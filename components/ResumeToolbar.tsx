@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "../app/resume/resume.module.css";
+import { Icon } from "@/components/Icon";
 
 type Theme = "dark" | "light";
 
@@ -34,10 +35,10 @@ export function ResumeToolbar() {
         aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
         title={theme === "light" ? "Dark theme" : "Light theme"}
       >
-        {theme === null ? "◐" : theme === "dark" ? "☀" : "☾"}
+        <Icon name={theme === "light" ? "moon" : "sun"} />
       </button>
       <button className={styles.print} onClick={() => window.print()}>
-        Save as PDF ↓
+        Save as PDF <Icon name="download" size={14} />
       </button>
     </div>
   );

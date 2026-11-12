@@ -4,6 +4,7 @@ import { getProfile } from "@/lib/profile";
 import { CERT_LINKS } from "@/config/profile";
 import { ResumeToolbar } from "@/components/ResumeToolbar";
 import styles from "./resume.module.css";
+import { Icon } from "@/components/Icon";
 
 export const revalidate = 60;
 
@@ -27,7 +28,7 @@ export default async function ResumePage() {
   return (
     <div className={styles.screen}>
       <div className={styles.toolbar}>
-        <Link href="/" className={styles.back}>← Back to portfolio</Link>
+        <Link href="/" className={styles.back}><Icon name="arrowLeft" size={14} /> Back to portfolio</Link>
         <ResumeToolbar />
       </div>
 
