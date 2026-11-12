@@ -21,7 +21,7 @@ Lighthouse (PageSpeed Insights) on the live site — desktop:
 ## How it works
 
 ```
-GitHub repos (topic: portfolio)  ──discovery via API──▶  Hub (Next.js · Vercel · ISR)
+GitHub repos (topic: portfolio)  ──discovery via API──▶  Hub (Next.js, Vercel, ISR)
                                                           │  renders cards
 Spoke deploy ──POST /api/revalidate──▶ hub refreshes      ▼
                                               Visitor browses, links out to live apps
@@ -80,14 +80,14 @@ Environment (`.env.local`):
 | `GITHUB_TOKEN` | Optional PAT — raises the API rate limit (60 → 5000/hr). |
 | `REVALIDATE_SECRET` | Shared secret for `POST /api/revalidate`. |
 
-Scripts: `npm run dev` · `build` · `start` · `lint` · `typecheck`.
+Scripts: `npm run dev`, `build`, `start`, `lint`, `typecheck`.
 
 ---
 
 ## Deploying
 
 Import the repo in Vercel, set the env vars, deploy. Add the URL above. CI
-([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs lint · typecheck ·
+([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs lint, typecheck,
 build on every push.
 
 ---

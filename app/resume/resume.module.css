@@ -139,7 +139,13 @@
   text-decoration: underline;
 }
 
+.tagline {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
 .sep {
+  margin: 0 0.5em;
   color: var(--r-dim);
 }
 
