@@ -46,10 +46,10 @@ export const profile: Profile = {
   avatar: undefined,
   headline: "Senior Frontend Engineer",
   tagline: "React · TypeScript · Next.js · Node.js",
-  location: "São Paulo, Brazil",
-  timezone: "Remote · UTC-3, full overlap with US Eastern and Central hours",
+  location: "Lisbon, Portugal",
+  timezone: "Remote · UTC+0/+1, on the UK and EU working day",
   available: false,
-  availability: "Remote · São Paulo, Brazil (UTC-3), working US business hours.",
+  availability: "Remote · Lisbon, Portugal (UTC+0/+1), working European hours.",
   // Same facts and wording as the résumé (~/Documents/resume/build.js); change both together.
   bio: [
     "Frontend engineer with six years in React and TypeScript who works across the stack in Node.js when a feature needs it. I currently own the back-office frontend and its NestJS BFF at a B2B iGaming platform. Before that I built the rich-text editor and the feeds platform for Paris Match on Contentful.",
