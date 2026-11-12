@@ -4,11 +4,12 @@ import { getProfile } from "@/lib/profile";
 import { CERT_LINKS } from "@/config/profile";
 import { ResumeToolbar } from "@/components/ResumeToolbar";
 import styles from "./resume.module.css";
+import { Icon } from "@/components/Icon";
 
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Vitalii Popov — Resume",
+  title: "Vitalii Popov, résumé",
   description: "Résumé of Vitalii Popov, Senior Frontend Engineer: React, TypeScript, Next.js, Node.js, Contentful.",
   robots: { index: true, follow: true },
 };
@@ -27,7 +28,7 @@ export default async function ResumePage() {
   return (
     <div className={styles.screen}>
       <div className={styles.toolbar}>
-        <Link href="/" className={styles.back}>← Back to portfolio</Link>
+        <Link href="/" className={styles.back}><Icon name="arrowLeft" size={14} /> Back to portfolio</Link>
         <ResumeToolbar />
       </div>
 
@@ -35,15 +36,17 @@ export default async function ResumePage() {
         <header className={styles.head}>
           <h1 className={styles.name}>{p.name}</h1>
           <p className={styles.headline}>
-            {p.headline} · {p.tagline}
+            {p.headline}
+            <br />
+            <span className={styles.tagline}>{p.tagline}</span>
           </p>
           <p className={styles.contact}>
-            {p.location} · {p.timezone}
+            {p.location}. {p.timezone}
           </p>
           <p className={styles.contact}>
             {contact.map((c, i) => (
               <span key={c.label}>
-                {i > 0 && <span className={styles.sep}> · </span>}
+                {i > 0 && <span className={styles.sep} aria-hidden="true">/</span>}
                 <a href={c.href}>{c.label}</a>
               </span>
             ))}
@@ -57,7 +60,7 @@ export default async function ResumePage() {
         </Section>
 
         <Section title="Skills">
-          <p className={styles.skills}>{p.stack.join(" · ")}</p>
+          <p className={styles.skills}>{p.stack.join(", ")}</p>
         </Section>
 
         <Section title="Experience">
@@ -87,7 +90,7 @@ export default async function ResumePage() {
               <div key={e.school} className={styles.eduItem}>
                 <div className={styles.eduSchool}>{e.school}</div>
                 <div className={styles.eduMeta}>
-                  {e.degree} · {e.period}
+                  {e.degree}, {e.period}
                 </div>
               </div>
             ))}
@@ -111,7 +114,7 @@ export default async function ResumePage() {
               })}
             </ul>
             <p className={styles.langs}>
-              {p.languages.map((l) => `${l.name} (${l.level})`).join(" · ")}
+              {p.languages.map((l) => `${l.name} (${l.level})`).join(", ")}
             </p>
           </Section>
         </div>

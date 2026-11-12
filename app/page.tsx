@@ -5,6 +5,7 @@ import { ProjectGrid } from "@/components/ProjectGrid";
 import { AboutHero } from "@/components/AboutHero";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import styles from "./page.module.css";
+import { Icon } from "@/components/Icon";
 
 // Statically rendered, revalidated hourly. New/updated repos surface on the
 // next window, or immediately via POST /api/revalidate from a spoke deploy.
@@ -32,7 +33,7 @@ export default async function HomePage() {
 
         <section id="work" aria-labelledby="work-h" className={styles.work}>
           <div className={`${styles.header} reveal`} style={{ "--i": 8 } as React.CSSProperties}>
-            <p className="label">Index · {String(projects.length).padStart(2, "0")} projects</p>
+            <p className="label">Index / {String(projects.length).padStart(2, "0")} projects</p>
             <h2 id="work-h" className={styles.title}>
               Live work, <span className={styles.thin}>inspectable end to end</span>
             </h2>
@@ -53,9 +54,9 @@ export default async function HomePage() {
       </main>
 
       <footer className={styles.footer}>
-        <span className="label">Next.js · auto-discovered from GitHub · Vercel</span>
+        <span className="label">Built with Next.js, projects discovered from GitHub</span>
         <a href="https://github.com/Yeezy2277/portfolio-hub" className={styles.footLink}>
-          Source ↗
+          Source <Icon name="arrowUpRight" size={14} />
         </a>
       </footer>
     </>

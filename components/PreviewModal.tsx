@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import type { Project } from "@/lib/types";
 import { previewImage } from "@/lib/preview";
 import styles from "./PreviewModal.module.css";
+import { Icon } from "@/components/Icon";
 
 export function PreviewModal({
   project,
@@ -49,11 +50,11 @@ export function PreviewModal({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open live ↗
+                Open live <Icon name="arrowUpRight" size={15} />
               </a>
             )}
             <button className={styles.close} onClick={onClose} aria-label="Close preview">
-              ✕
+              <Icon name="close" size={18} />
             </button>
           </div>
         </header>
@@ -77,9 +78,9 @@ export function PreviewModal({
               )}
               <p className={styles.note}>
                 {project.liveUrl
-                  ? "This site doesn't allow embedding — open it live for the real thing."
+                  ? "This site doesn't allow embedding. Open it live to try it."
                   : image
-                    ? "This one runs inside Contentful — preview shown above."
+                    ? "This one runs inside Contentful, so the preview above is all that embeds."
                     : "No live deployment yet."}
               </p>
             </div>
