@@ -6,6 +6,7 @@ import { getProjects } from "@/lib/projects";
 import { previewImage } from "@/lib/preview";
 import { fetchReadmeHtml } from "@/lib/readme";
 import styles from "./page.module.css";
+import { Icon } from "@/components/Icon";
 
 export const revalidate = 60;
 
@@ -45,7 +46,7 @@ export default async function ProjectPage({
   return (
     <main id="main" className={styles.page}>
       <Link href="/" className={styles.back}>
-        ← All projects
+        <Icon name="arrowLeft" size={14} /> All projects
       </Link>
 
       <h1 className={styles.title}>{project.title}</h1>
@@ -65,7 +66,7 @@ export default async function ProjectPage({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Open live ↗
+              Open live <Icon name="arrowUpRight" size={14} />
             </a>
           )}
           {project.repoUrl && (
@@ -75,7 +76,7 @@ export default async function ProjectPage({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Source ↗
+              Source <Icon name="arrowUpRight" size={14} />
             </a>
           )}
         </span>

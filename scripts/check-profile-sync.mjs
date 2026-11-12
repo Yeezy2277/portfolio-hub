@@ -65,7 +65,7 @@ for (const key of FIELDS) {
 }
 
 if (drift.length) {
-  console.error(`✗ profile drift — config/profile.ts is stale vs Contentful:`);
+  console.error(`Profile drift: config/profile.ts is stale compared with Contentful:`);
   for (const d of drift) {
     console.error(`  ${d.key}:`);
     console.error(`    CMS:      ${JSON.stringify(d.cms)}`);
@@ -75,4 +75,4 @@ if (drift.length) {
   process.exit(1);
 }
 
-console.log(`✓ profile in sync — ${FIELDS.length} identity fields match Contentful.`);
+console.log(`Profile in sync: ${FIELDS.length} identity fields match Contentful.`);

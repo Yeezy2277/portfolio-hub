@@ -5,6 +5,7 @@ import { ProjectGrid } from "@/components/ProjectGrid";
 import { AboutHero } from "@/components/AboutHero";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import styles from "./page.module.css";
+import { Icon } from "@/components/Icon";
 
 // Statically rendered, revalidated hourly. New/updated repos surface on the
 // next window, or immediately via POST /api/revalidate from a spoke deploy.
@@ -55,7 +56,7 @@ export default async function HomePage() {
       <footer className={styles.footer}>
         <span className="label">Built with Next.js, projects discovered from GitHub</span>
         <a href="https://github.com/Yeezy2277/portfolio-hub" className={styles.footLink}>
-          Source ↗
+          Source <Icon name="arrowUpRight" size={14} />
         </a>
       </footer>
     </>
