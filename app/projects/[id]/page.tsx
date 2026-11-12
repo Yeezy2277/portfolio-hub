@@ -23,7 +23,7 @@ export async function generateMetadata({
   const project = (await getProjects()).find((p) => p.id === id);
   if (!project) return {};
   return {
-    title: `${project.title} — projects`,
+    title: `${project.title}, Vitalii Popov`,
     description: project.summary,
     openGraph: { title: project.title, description: project.summary },
   };
@@ -108,7 +108,7 @@ export default async function ProjectPage({
         />
       ) : (
         <p className={styles.readmeMissing}>
-          No README available yet — see the source repository for details.
+          No README yet. The source repository has the details.
         </p>
       )}
     </main>

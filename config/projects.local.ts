@@ -12,7 +12,7 @@ import type { Project } from "@/lib/types";
 export const localProjects: Project[] = [
   {
     id: "podium",
-    title: "Podium · promo back office",
+    title: "Podium",
     summary:
       "A multi-tenant back office for e-commerce leaderboard promotions, with a NestJS and Prisma API and a React and MUI admin. The API checks brand access on every request, schedules each campaign's start and end, and ranks the leaderboard in one SQL query. Admins work in their own time zone, and money is stored in minor units. Sign in as any of four demo roles.",
     liveUrl: "https://podium.vitaliipopov.dev",
@@ -27,7 +27,7 @@ export const localProjects: Project[] = [
   },
   {
     id: "wire",
-    title: "Wire · feeds pipeline",
+    title: "Wire",
     summary:
       "An event-driven feeds pipeline for a Contentful blog. A verified webhook receiver filters and deduplicates events, a queue hands them to an idempotent Node.js worker, and the worker rewrites only the RSS, JSON Feed, Google News and partner feeds that changed. It rebuilds my production work for a news publisher, and the demo replays real webhook traffic.",
     liveUrl: "https://wire.vitaliipopov.dev",
@@ -57,7 +57,7 @@ export const localProjects: Project[] = [
   },
   {
     id: "depot",
-    title: "Depot · content API",
+    title: "Depot",
     summary:
       "The backend half of a CMS. Admins sign in with sessions, apps read with hashed delivery tokens, and content lives in a typed Postgres model of collections and items with a publish lifecycle. Every route validates input with Zod and is rate limited. Built with Next.js route handlers, Drizzle and Neon.",
     liveUrl: "https://depot.vitaliipopov.dev",
@@ -102,7 +102,7 @@ export const localProjects: Project[] = [
   },
   {
     id: "live-ops-console",
-    title: "Pulse · live ops console",
+    title: "Pulse",
     summary:
       "A real-time console for a multiplayer game. The world is simulated in the browser and painted on canvas at 60 fps, outside React's render cycle. Break a region, watch the alert wait out its threshold, step through it tick by tick and share the seed to replay the run. No backend.",
     liveUrl: "https://pulse.vitaliipopov.dev",
@@ -117,7 +117,7 @@ export const localProjects: Project[] = [
   },
   {
     id: "bim-clash-viewer",
-    title: "Girder · BIM clash viewer",
+    title: "Girder",
     summary:
       "A browser BIM coordination viewer. A procedural building renders in three.js with a section plane and ghosted clash isolation, and a pure, unit-tested engine finds hard and clearance clashes. Review them as a queue with J and K and export the report as CSV. No backend.",
     liveUrl: "https://girder.vitaliipopov.dev",

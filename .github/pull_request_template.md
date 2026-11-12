@@ -8,6 +8,6 @@
 
 ## Checklist
 
-- [ ] `npm run lint` · `npm run typecheck` · `npm test` · `npm run build` pass locally
+- [ ] `npm run lint`, `npm run typecheck`, `npm test` and `npm run build` pass locally
 - [ ] Unit tests added/updated where merge/discovery logic changed
 - [ ] Branch name follows `feature/*` | `fix/*` | `chore/*` | `docs/*` | `refactor/*`
