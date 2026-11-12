@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Vitalii Popov — Resume",
-  description: "Senior Fullstack Engineer resume — React, Node.js, TypeScript, Contentful.",
+  description: "Résumé of Vitalii Popov, Senior Frontend Engineer: React, TypeScript, Next.js, Node.js, Contentful.",
   robots: { index: true, follow: true },
 };
 
