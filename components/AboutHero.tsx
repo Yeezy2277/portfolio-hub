@@ -133,7 +133,7 @@ export function AboutHero({ profile }: { profile: Profile }) {
             <ul className={styles.plainList}>
               {profile.languages.map((l) => (
                 <li key={l.name}>
-                  {l.name} <span className={styles.dim}>— {l.level}</span>
+                  {l.name} <span className={styles.dim}>({l.level.toLowerCase()})</span>
                 </li>
               ))}
             </ul>

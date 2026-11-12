@@ -75,7 +75,7 @@ export default async function ResumePage() {
                   ) : (
                     role.company
                   )}{" "}
-                  <span className={styles.roleTitle}>— {role.title}</span>
+                  <span className={styles.roleTitle}>, {role.title}</span>
                 </span>
                 <span className={styles.rolePeriod}>{role.period}</span>
               </div>
