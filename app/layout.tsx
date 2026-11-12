@@ -6,9 +6,9 @@ import "./globals.css";
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-mono", display: "swap" });
 
-const title = "Vitalii Popov — Senior Fullstack Engineer";
+const title = "Vitalii Popov, Senior Frontend Engineer";
 const description =
-  "Senior Fullstack Engineer (React · Node.js · TypeScript · Contentful). Live, inspectable projects — CMS platform, content API, real-time canvas, 3D/BIM. Remote, US business hours.";
+  "Senior Frontend Engineer (React, TypeScript, Next.js, Node.js) in São Paulo, working US hours. Live public rebuilds of my NDA work: Contentful apps, a feeds pipeline, a promo back office, a real-time console and a BIM viewer.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://vitaliipopov.dev"),
