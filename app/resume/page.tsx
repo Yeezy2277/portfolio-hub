@@ -10,7 +10,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Vitalii Popov, résumé",
-  description: "Résumé of Vitalii Popov, Senior Frontend Engineer: React, TypeScript, Next.js, Node.js, Contentful.",
+  description: "Résumé of Vitalii Popov, Senior Full-stack Engineer who started in frontend: React, TypeScript, Next.js, Node.js, Contentful.",
   robots: { index: true, follow: true },
 };
 
@@ -36,9 +36,7 @@ export default async function ResumePage() {
         <header className={styles.head}>
           <h1 className={styles.name}>{p.name}</h1>
           <p className={styles.headline}>
-            {p.headline}
-            <br />
-            <span className={styles.tagline}>{p.tagline}</span>
+            {p.headline} <span className={styles.tagline}>{p.tagline}</span>
           </p>
           <p className={styles.contact}>
             {p.location}. {p.timezone}

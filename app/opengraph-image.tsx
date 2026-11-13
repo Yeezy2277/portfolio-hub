@@ -40,7 +40,7 @@ export default function OpengraphImage() {
             Vitalii Popov
           </div>
           <div style={{ fontSize: 30, color: "#a09f98", maxWidth: 820, lineHeight: 1.4 }}>
-            Senior Frontend Engineer. Live public rebuilds of NDA work: Contentful apps, feeds, back office, real-time, 3D.
+            Senior Full-stack Engineer who started in frontend. Live public rebuilds of NDA work: Contentful apps, feeds, back office, real-time, 3D.
           </div>
         </div>
 
