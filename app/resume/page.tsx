@@ -36,9 +36,7 @@ export default async function ResumePage() {
         <header className={styles.head}>
           <h1 className={styles.name}>{p.name}</h1>
           <p className={styles.headline}>
-            {p.headline}
-            <br />
-            <span className={styles.tagline}>{p.tagline}</span>
+            {p.headline} <span className={styles.tagline}>{p.tagline}</span>
           </p>
           <p className={styles.contact}>
             {p.location}. {p.timezone}
