@@ -11,6 +11,21 @@ import type { Project } from "@/lib/types";
  */
 export const localProjects: Project[] = [
   {
+    id: "porter",
+    title: "Porter",
+    summary:
+      "A WordPress-to-Contentful migration built around Claude. Code converts every article and proves no word was lost; Claude does only the judgement calls: field mapping with structured output, author and topic linking with retrieval (Voyage embeddings, pgvector and full-text search fused by rank), and a tool-using agent that fills each entry for a human review queue. Evals run in CI. My own product, not a rebuild of client work; the demo replays recorded model answers.",
+    liveUrl: "https://porter.vitaliipopov.dev",
+    repoUrl: "https://github.com/Yeezy2277/porter",
+    image: "/preview-porter.jpg",
+    tags: ["LLM", "RAG", "Agents", "Evals", "Next.js", "pgvector"],
+    embeddable: false,
+    featured: true,
+    hidden: false,
+    order: -3,
+    stars: 0,
+  },
+  {
     id: "podium",
     title: "Podium",
     summary:
