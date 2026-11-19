@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   title: "Fixed-price LLM pilot, Vitalii Popov",
   description:
     "A one-week LLM quality baseline or a two-week ship-it pilot: fixed price, written definition of done, US Eastern hours from Medellín, credited toward follow-on work.",
-  robots: { index: true, follow: true },
+  // Shared by direct link in outreach only, while I am still on a current contract.
+  robots: { index: false, follow: false },
 };
 
 // Prices are mine to change; keep them in one place.
