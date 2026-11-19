@@ -49,6 +49,9 @@ export function AboutHero({ profile }: { profile: Profile }) {
             <Link href="/resume" className={styles.resume}>
               Resume
             </Link>
+            <Link href="/pilot" className={styles.link}>
+              Pilot
+            </Link>
             {profile.links.map((l) => (
               <a
                 key={l.label}
