@@ -40,12 +40,12 @@ export default function OpengraphImage() {
             Vitalii Popov
           </div>
           <div style={{ fontSize: 30, color: "#a09f98", maxWidth: 820, lineHeight: 1.4 }}>
-            Senior Full-stack Engineer who started in frontend. Live public rebuilds of NDA work: Contentful apps, feeds, back office, real-time, 3D.
+            Senior AI Product Engineer. LLM apps with RAG, agents and evals, plus live public rebuilds of NDA work.
           </div>
         </div>
 
         <div style={{ display: "flex", gap: 12 }}>
-          {["React", "Next.js", "TypeScript", "Contentful", "three.js"].map((t) => (
+          {["LLM", "RAG", "React", "Next.js", "TypeScript"].map((t) => (
             <div
               key={t}
               style={{
